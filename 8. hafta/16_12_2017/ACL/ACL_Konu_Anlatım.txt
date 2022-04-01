@@ -1,0 +1,33 @@
+ACL- Access Control Lists
+
+DENY  -Engelle
+PERMIT-Ýzin Ver
+
+
+Standart (1-99)   -- Named Standart ACL
+Source Based
+
+Host IP Adresi
+Network ID
+
+
+Extended(100-199) -- Named Extended ACL
+Source ----->Destination
+IP		IP
+Port(0-65535)	Port (0-65535)
+Protocol	Protocol (IP,TCP,UDP,ICP,OSPF,EIGRP)
+
+
+Access-list 5
+10 deny 1.1.1.1
+20 deny   1.1.1.2
+30 deny 192.168.1.4
+40 deny 192.168.1.50
+50 deny   172.16.1.5
+.
+.
+.
+.
+1000 deny 1.1.5.6
+1010 permit any
+     deny any(implicit)

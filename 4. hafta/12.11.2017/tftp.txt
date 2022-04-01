@@ -1,0 +1,67 @@
+FTP- File Transfer Protocol  TCP 20-21
+
+ 
+TFTP Trivial File Transfer Protocol  UDP 69
+
+
+
+
+
+Switch üzerine yeni bir cihaz takýldýðýnda portun doðrudan iletim
+durumuna geçmesi için aþaðýdaki komutlar uygulanýr.
+
+Switch(config-if)#interface fastEthernet 0/3
+Switch(config-if)#spanning-tree portfast 
+
+TFTP Sunucudan bir IOS.bin dosyasýnýn alýnabilmesi için
+Rommon modda iken aþaðýdaki ayarlarýn yapýlmasý gerekir.
+Bu ayarlar yapýldýktan sonra "tftpdnld" komutu kullanýlarak
+bin uzantýlý dosya tftp sunucudan kopyalanýr.
+
+Rommon 1>IP_ADDRESS=192.168.100.142
+Rommon 2>IP_SUBNET_MASK=255.255.255.240
+Rommon 3>DEFAULT_GATEWAY=192.168.100.142
+Rommon 4>TFTP_SERVER=192.168.100.129
+Rommon 5>TFTP_FILE=c2800nm-advipservicesk9-mz.124-15.T1.bin
+
+
+Rommon 6>tftpdnld
+
+
+
+Password Recover Adýmlarý
+1- Cihaza console port üzerinden baðlantý kurulur.
+2- Cihaz reload edilerek açýlýþ sýrasýnda Ctrl+Pause Break tuþlarýna basýlarak
+Rommon moda geçilir.
+
+3- Rommon 1>confreg 0x2142  
+   Rommon 2>reset
+komutu verilerek cihazýn NVRam'e bakmadan açýlmasý saðlanýr.
+
+
+Configuration register deðerleri
+0x2102=NvRAM'e bakarak açýl.
+
+0x2142=NvRAM'e bakmadan açýl. 
+
+4-Cihaz boþ konfigürasyonla açýlýr ancak NvRam içindeki startup-config
+dosyamýz yani ayarlarýmýz silinmediði için o ayarlarý
+aþaðýdaki komutla geri yükleriz.
+
+CCNA#copy startup-config running-config
+
+
+Þifreler kriptolu ise config moda geçilerek tüm þifreler yeniden verilir.
+
+bu ayarlar write komutu ile tekrar NVRAM'e yazýlýr.
+
+5-CCNA#configure terminal
+  CCNA(config)#config-register 0x2102 
+
+ komutu uygulanarak bir sonraki açýlýþta cihazýn NVRam'e bakarak açýlmasý saðlanýr.
+
+
+
+c2800nm-advipservicesk9-mz.124-15.T1.bin
+
+

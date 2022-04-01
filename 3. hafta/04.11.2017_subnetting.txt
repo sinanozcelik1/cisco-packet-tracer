@@ -1,0 +1,115 @@
+ /8  /8  /8  /6
+255.255.255.11111100
+
+
+
+172.16.45.0/30
+172.16.45.4/30
+172.16.45.8/30
+172.16.45.12/30
+
+45.13 - 45.14
+
+Broadcast 45.15
+
+
+
+
+172.16.45.16/30
+
+
+
+
+
+172.30.30.63/27
+/8  /8  /8  /3      =/27
+255.255.255.11100000
+
+0(sýfýr) olan bitler host cihazlarý adreslemek için kullanýlýr.
+Bu nedenle  2 üzeri 5 =32(Network Artýþ Aralýðý)
+
+(2 üzeri 5)-2 =30  Adreslenebilen host sayýsý.
+
+-2 çýkartmamýzýn nedeni;
+1-Network ID 
+2-Broadcast ID deðerleri hiç bir cihaza IP adresi olarak verilemez.
+
+1.Network 172.30.30.0/27
+
+2.Network 172.30.30.32/27
+Valid Host Range:172.30.30.33-172.30.30.62
+Broadcast ID    :172.30.30.63
+
+172.30.30.62 IP adresi Router interface'ine 
+atanýrsa, bu adres aðdaki tüm cihazlar için
+"DEFAULT GATEWAY" adresidir.
+
+
+3.Network 172.30.30.64/27
+
+4.Network 172.30.30.96/27
+
+5.Network 172.30.30.128/27
+
+6.Network 172.30.30.160/27
+
+7.Network 172.30.30.192/27
+
+8.Network 172.30.30.224/27
+
+
+
+
+
+2n-2
+
+ 255.255.255.00000000 
+             76543210
+             22222222
+        
+2n=  n=7 deðeri decimal = 128
+2n=  n=6 deðeri decimal =  64
+2n=  n=5 deðeri decimal =  32
+2n=  n=4 deðeri decimal =  16
+2n=  n=3 deðeri decimal =  8
+2n=  n=2 deðeri decimal =  4
+2n=  n=1 deðeri decimal =  2
+2n=  n=0 deðeri decimal =  1
+
+
+ Her bit için decimal deðeri yerine yazalým
+
+  128+64+32+16+8+4+2+1  = 255
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

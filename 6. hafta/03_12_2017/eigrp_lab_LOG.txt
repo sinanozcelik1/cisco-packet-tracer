@@ -1,0 +1,181 @@
+Paz 3. Ara 18:02:27 2017   Router3   Router>en
+Paz 3. Ara 18:02:35 2017   Router3   Router#conf ter
+Paz 3. Ara 18:03:08 2017   Router3   Router(config)#int fastEthernet 0/0
+Paz 3. Ara 18:03:23 2017   Router3   Router(config-if)#ip address 172.16.16.254 255.255.255.0
+Paz 3. Ara 18:03:32 2017   Router3   Router(config-if)#no shutdown 
+Paz 3. Ara 18:03:49 2017   Router3   Router(config-if)#exit
+Paz 3. Ara 18:03:55 2017   Router3   Router(config)#interface loopback 17
+Paz 3. Ara 18:04:06 2017   Router3   Router(config-if)#ip add 172.16.17.254 255.255.255.0
+Paz 3. Ara 18:04:10 2017   Router3   Router(config-if)#interface loopback 18
+Paz 3. Ara 18:04:16 2017   Router3   Router(config-if)#ip add 172.16.18.254 255.255.255.0
+Paz 3. Ara 18:04:20 2017   Router3   Router(config-if)#interface loopback 19
+Paz 3. Ara 18:04:25 2017   Router3   Router(config-if)#ip add 172.16.19.254 255.255.255.0
+Paz 3. Ara 18:08:12 2017   Router3   Router(config-if)#exit
+Paz 3. Ara 18:08:17 2017   Router3   Router(config)#int fa 0/1
+Paz 3. Ara 18:08:42 2017   Router3   Router(config-if)#no shutdown 
+Paz 3. Ara 18:08:58 2017   Router3   Router(config-if)#ip add 192.168.10.2 255.255.255.252
+Paz 3. Ara 18:09:20 2017   Router3   Router(config-if)#description to_Sube2_
+Paz 3. Ara 18:09:58 2017   Router3   Router(config-if)#do wr
+Paz 3. Ara 18:10:43 2017   Sube2   Router>en
+Paz 3. Ara 18:10:45 2017   Sube2   Router#conf ter
+Paz 3. Ara 18:10:51 2017   Sube2   Router(config)#hostname Sube2
+Paz 3. Ara 18:11:03 2017   Sube2   Sube2(config)#int fa 1/0
+Paz 3. Ara 18:11:11 2017   Sube2   Sube2(config-if)#no shutdown 
+Paz 3. Ara 18:11:27 2017   Sube2   Sube2(config-if)#ip add 192.168.10.1 255.255.255.252
+Paz 3. Ara 18:11:51 2017   Sube2   Sube2(config-if)#do ping 192.168.10.2
+Paz 3. Ara 18:12:14 2017   Sube2   Sube2(config-if)#do ping 192.168.10.2
+Paz 3. Ara 18:12:25 2017   Sube2   Sube2(config-if)#exit
+Paz 3. Ara 18:12:44 2017   Sube2   Sube2(config)#int fa 0/0
+Paz 3. Ara 18:12:49 2017   Sube2   Sube2(config-if)#no shutdown 
+Paz 3. Ara 18:13:23 2017   Sube2   Sube2(config-if)#ip add 192.168.10.6 255.255.255.252
+Paz 3. Ara 18:13:35 2017   Sube2   Sube2(config-if)#description to_Head_Office
+Paz 3. Ara 18:14:06 2017   Sube2   Sube2(config-if)#do wr
+Paz 3. Ara 18:16:41 2017   Merkez   rommon 1 > ?
+Paz 3. Ara 18:17:52 2017   Merkez   rommon 2 > tftpdnld
+Paz 3. Ara 18:18:48 2017   Merkez   rommon 3 > ?
+Paz 3. Ara 18:18:53 2017   Merkez   rommon 4 > reset
+Paz 3. Ara 18:21:48 2017   Merkez   Merkez>enable 
+Paz 3. Ara 18:22:13 2017   Merkez   Merkez#ping 192.168.10.6
+Paz 3. Ara 18:22:23 2017   Merkez   Merkez#ping 192.168.10.6
+Paz 3. Ara 18:22:51 2017   Merkez   Merkez#ping S2
+Paz 3. Ara 18:23:53 2017   Merkez   Merkez#conf ter
+Paz 3. Ara 18:23:57 2017   Merkez   Merkez(config)#ip ?
+Paz 3. Ara 18:24:11 2017   Merkez   Merkez(config)#ip host ?
+Paz 3. Ara 18:24:17 2017   Merkez   Merkez(config)#ip host S2 ?
+Paz 3. Ara 18:24:29 2017   Merkez   Merkez(config)#ip host S2 192.168.10.6
+Paz 3. Ara 18:24:50 2017   Merkez   Merkez(config)#ip host S1 192.168.10.10
+Paz 3. Ara 18:25:06 2017   Merkez   Merkez#ping S2
+Paz 3. Ara 18:25:10 2017   Merkez   Merkez#ping S2
+Paz 3. Ara 18:25:13 2017   Merkez   Merkez#ping S1
+Paz 3. Ara 18:26:36 2017   Merkez   Merkez#wr
+Paz 3. Ara 18:26:39 2017   Merkez   Merkez#conf ter
+Paz 3. Ara 18:26:51 2017   Merkez   Merkez(config)#int fa 1/0
+Paz 3. Ara 18:26:54 2017   Merkez   Merkez(config-if)#no shutdown 
+Paz 3. Ara 18:27:05 2017   Merkez   Merkez(config-if)#ip add 192.168.10.9 255.255.255.252
+Paz 3. Ara 18:27:45 2017   Merkez   Merkez(config-if)#do wr
+Paz 3. Ara 18:28:09 2017   Merkez   Merkez(config-if)#description to_Sube1_connection
+Paz 3. Ara 18:28:17 2017   Merkez   Merkez#wr
+Paz 3. Ara 18:28:29 2017   Sube1   Router>en
+Paz 3. Ara 18:28:31 2017   Sube1   Router#conf ter
+Paz 3. Ara 18:28:39 2017   Sube1   Router(config)#int fa 0/1
+Paz 3. Ara 18:28:43 2017   Sube1   Router(config-if)#no shutdown 
+Paz 3. Ara 18:28:55 2017   Sube1   Router(config-if)#ip add 192.168.10.10 255.255.255.252
+Paz 3. Ara 18:29:19 2017   Sube1   Router#ping 192.168.10.9
+Paz 3. Ara 18:29:33 2017   Sube1   Router#conf ter
+Paz 3. Ara 18:29:38 2017   Sube1   Router(config)#hostname Sube1
+Paz 3. Ara 18:29:52 2017   Merkez   Merkez#ping S1
+Paz 3. Ara 18:29:55 2017   Merkez   Merkez#ping S2
+Paz 3. Ara 18:30:38 2017   Merkez   Merkez#ping 192.168.10.2
+Paz 3. Ara 18:31:03 2017   Merkez   Merkez#sh ip route 
+Paz 3. Ara 18:37:01 2017   Sube1   Sube1#conf ter
+Paz 3. Ara 18:37:07 2017   Sube1   Sube1(config)#int loo 32
+Paz 3. Ara 18:37:19 2017   Sube1   Sube1(config-if)#ip add 192.168.32.254 255.255.255.0
+Paz 3. Ara 18:37:24 2017   Sube1   Sube1(config-if)#int loo 33
+Paz 3. Ara 18:37:28 2017   Sube1   Sube1(config-if)#ip add 192.168.33.254 255.255.255.0
+Paz 3. Ara 18:37:32 2017   Sube1   Sube1(config-if)#int loo 34
+Paz 3. Ara 18:37:36 2017   Sube1   Sube1(config-if)#ip add 192.168.34.254 255.255.255.0
+Paz 3. Ara 18:37:41 2017   Sube1   Sube1(config-if)#int loo 35
+Paz 3. Ara 18:37:47 2017   Sube1   Sube1(config-if)#ip add 192.168.35.254 255.255.255.0
+Paz 3. Ara 18:38:16 2017   Sube1   Sube1#wr
+Paz 3. Ara 18:38:31 2017   Merkez   Merkez#conf ter
+Paz 3. Ara 18:38:35 2017   Merkez   Merkez(config)#int fa 0/0
+Paz 3. Ara 18:38:47 2017   Merkez   Merkez(config-if)#description to_ISP_Network
+Paz 3. Ara 18:38:59 2017   Merkez   Merkez(config-if)#ip add 85.100.100.2 255.255.255.252
+Paz 3. Ara 18:39:02 2017   Merkez   Merkez(config-if)#no shutdown 
+Paz 3. Ara 18:39:47 2017   Merkez   Merkez(config-if)#exit
+Paz 3. Ara 18:41:44 2017   Merkez   Merkez(config)#ip route 0.0.0.0 0.0.0.0 ?
+Paz 3. Ara 18:42:00 2017   Merkez   Merkez(config)#ip route 0.0.0.0 0.0.0.0 85.100.100.1
+Paz 3. Ara 18:44:50 2017   ISP_Router   Router>en
+Paz 3. Ara 18:44:52 2017   ISP_Router   Router#conf ter
+Paz 3. Ara 18:44:56 2017   ISP_Router   Router(config)#int fastEthernet 0/0
+Paz 3. Ara 18:44:59 2017   ISP_Router   Router(config-if)#no shutdown 
+Paz 3. Ara 18:45:10 2017   ISP_Router   Router(config-if)#ip add 85.100.100.1 255.255.255.252
+Paz 3. Ara 18:45:34 2017   ISP_Router   Router(config-if)#do ping 85.100.100.2
+Paz 3. Ara 18:46:42 2017   Merkez   Merkez(config)#ip host ISP 85.100.100.1
+Paz 3. Ara 18:46:45 2017   Merkez   Merkez#ping S2
+Paz 3. Ara 18:46:49 2017   Merkez   Merkez#ping S1
+Paz 3. Ara 18:46:52 2017   Merkez   Merkez#ping ISP
+Paz 3. Ara 19:08:00 2017   Router3   Router>en
+Paz 3. Ara 19:08:03 2017   Router3   Router#conf ter
+Paz 3. Ara 19:08:08 2017   Router3   Router(config)#router eigrp 50
+Paz 3. Ara 19:08:50 2017   Router3   Router(config-router)#?
+Paz 3. Ara 19:09:06 2017   Router3   Router(config-router)#distance ?
+Paz 3. Ara 19:09:19 2017   Router3   Router(config-router)#distance eigrp ?
+Paz 3. Ara 19:09:28 2017   Router3   Router(config-router)#?
+Paz 3. Ara 19:10:05 2017   Router3   Router(config-router)#network 192.168.10.0 ?
+Paz 3. Ara 19:10:43 2017   Router3   Router(config-router)#network 192.168.10.0 0.0.0.3
+Paz 3. Ara 19:11:27 2017   Router3   Router(config-router)#network 172.16.16.0 0.0.0.255
+Paz 3. Ara 19:11:50 2017   Sube2   Sube2>en
+Paz 3. Ara 19:11:52 2017   Sube2   Sube2#conf ter
+Paz 3. Ara 19:11:57 2017   Sube2   Sube2(config)#router eigrp 50
+Paz 3. Ara 19:12:36 2017   Sube2   Sube2(config-router)#network 192.168.10.0 0.0.0.3
+Paz 3. Ara 19:13:09 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:14:02 2017   Router3   Router#sh running-config 
+Paz 3. Ara 19:14:44 2017   Router3   Router#conf ter
+Paz 3. Ara 19:14:47 2017   Router3   Router(config)#router eigrp 50
+Paz 3. Ara 19:14:59 2017   Router3   Router(config-router)#network 172.16.16.0 0.0.0.255
+Paz 3. Ara 19:15:03 2017   Router3   Router(config-router)#network 172.16.17.0 0.0.0.255
+Paz 3. Ara 19:15:06 2017   Router3   Router(config-router)#network 172.16.18.0 0.0.0.255
+Paz 3. Ara 19:15:10 2017   Router3   Router(config-router)#network 172.16.19.0 0.0.0.255
+Paz 3. Ara 19:15:17 2017   Router3   Router#conf tersh run
+Paz 3. Ara 19:15:20 2017   Router3   Router#sh run
+Paz 3. Ara 19:15:33 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:17:34 2017   Router3   Router#conf ter
+Paz 3. Ara 19:17:36 2017   Router3   Router(config)#router eigrp 50
+Paz 3. Ara 19:17:41 2017   Router3   Router(config-router)#no auto-summary 
+Paz 3. Ara 19:18:09 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:20:25 2017   Router3   Router(config-router)#no network 172.16.18.0 0.0.0.255
+Paz 3. Ara 19:20:33 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:20:45 2017   Router3   Router#sh run
+Paz 3. Ara 19:22:04 2017   Router3   Router#conf ter
+Paz 3. Ara 19:22:11 2017   Router3   Router(config)#network 172.16.18.0 0.0.0.255
+Paz 3. Ara 19:22:15 2017   Router3   Router(config)#router eigrp 50
+Paz 3. Ara 19:22:17 2017   Router3   Router(config-router)#network 172.16.18.0 0.0.0.255
+Paz 3. Ara 19:22:20 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:22:39 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:22:50 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:23:12 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:23:59 2017   Sube2   Sube2#sh ip eigrp topology 
+Paz 3. Ara 19:25:14 2017   Router3   Router(config-router)#exit
+Paz 3. Ara 19:25:22 2017   Router3   Router(config)#int fastEthernet 0/1
+Paz 3. Ara 19:25:27 2017   Router3   Router(config-if)#ip summary-address ?
+Paz 3. Ara 19:25:32 2017   Router3   Router(config-if)#ip summary-address eigrp ?
+Paz 3. Ara 19:25:37 2017   Router3   Router(config-if)#ip summary-address eigrp 50 ?
+Paz 3. Ara 19:25:46 2017   Router3   Router(config-if)#ip summary-address eigrp 50 172.16.16.0 ?
+Paz 3. Ara 19:26:03 2017   Router3   Router(config-if)#ip summary-address eigrp 50 172.16.16.0 255.255.252.0
+Paz 3. Ara 19:26:25 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:27:56 2017   Sube2   Sube2#ping 172.16.18.254
+Paz 3. Ara 19:28:09 2017   Sube2   Sube2#ping 172.16.19.254
+Paz 3. Ara 19:28:21 2017   Router3   Router(config-if)#exit
+Paz 3. Ara 19:28:24 2017   Router3   Router(config)#interface loopback 20
+Paz 3. Ara 19:28:38 2017   Router3   Router(config-if)#ip address 172.16.19.254 255.255.255.0
+Paz 3. Ara 19:28:48 2017   Router3   Router(config-if)#ip address 172.16.20.254 255.255.255.0
+Paz 3. Ara 19:29:11 2017   Sube2   Sube2#ping 172.16.20.254
+Paz 3. Ara 19:33:54 2017   Sube2   Sube2#ping 172.16.16.1
+Paz 3. Ara 19:34:28 2017   Router3   Router#sh ip route 
+Paz 3. Ara 19:34:41 2017   Router3   Router#sh running-config 
+Paz 3. Ara 19:35:17 2017   Router3   Router#conf ter
+Paz 3. Ara 19:35:21 2017   Router3   Router(config)#router eigrp 50
+Paz 3. Ara 19:35:42 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:35:47 2017   Router3   Router(config-router)#network 172.16.20.0 0.0.0.255
+Paz 3. Ara 19:35:50 2017   Sube2   Sube2#sh ip route 
+Paz 3. Ara 19:38:31 2017   Merkez   Merkez>en
+Paz 3. Ara 19:38:38 2017   Merkez   Merkez#conf ter
+Paz 3. Ara 19:38:42 2017   Merkez   Merkez(config)#router eigrp 50
+Paz 3. Ara 19:39:09 2017   Merkez   Merkez(config-router)#network 192.168.10.4 0.0.0.3
+Paz 3. Ara 19:39:20 2017   Sube2   Sube2#sh running-config 
+Paz 3. Ara 19:39:40 2017   Sube2   Sube2#conf ter
+Paz 3. Ara 19:40:04 2017   Sube2   Sube2(config)#router eigrp 50
+Paz 3. Ara 19:40:08 2017   Sube2   Sube2(config-router)#network 192.168.10.4 0.0.0.3
+Paz 3. Ara 19:40:37 2017   Merkez   Merkez#sh ip route 
+Paz 3. Ara 19:41:31 2017   Sube2   Sube2(config-router)#no auto-summary 
+Paz 3. Ara 19:41:48 2017   Merkez   Merkez#sh ip route 
+Paz 3. Ara 19:41:52 2017   Merkez   Merkez#sh ip route 
+Paz 3. Ara 19:41:55 2017   Merkez   Merkez#conf ter
+Paz 3. Ara 19:41:59 2017   Merkez   Merkez(config)#router eigrp 50
+Paz 3. Ara 19:42:03 2017   Merkez   Merkez(config-router)#no auto-summary 
+Paz 3. Ara 19:42:06 2017   Merkez   Merkez#sh ip route 
+Paz 3. Ara 19:42:13 2017   Merkez   Merkez#sh ip route 
+Paz 3. Ara 19:42:14 2017   Merkez   Merkez#sh ip route 
+Paz 3. Ara 19:42:23 2017   Merkez   Merkez#sh ip route 
+Paz 3. Ara 19:42:23 2017   Merkez   Merkez#sh ip route 

@@ -1,0 +1,55 @@
+Paz 12. Kas 15:24:10 2017   PC1   PC>ssh/?
+Paz 12. Kas 15:32:55 2017   Router0   Router>en
+Paz 12. Kas 15:32:56 2017   Router0   Router#conf ter
+Paz 12. Kas 15:33:03 2017   Router0   Router(config)#crypto key generate ?
+Paz 12. Kas 15:33:38 2017   Router0   Router(config)#ip domain?
+Paz 12. Kas 15:42:05 2017   Router0   Router(config)#interface fastEthernet 0/0
+Paz 12. Kas 15:42:11 2017   Router0   Router(config-if)#no shutdown 
+Paz 12. Kas 15:42:37 2017   Router0   Router(config-if)#ip address 192.168.50.62 255.255.255.224
+Paz 12. Kas 16:47:32 2017   Router0   Router>reload
+Paz 12. Kas 16:53:16 2017   Router0   CCNA>enable 
+Paz 12. Kas 16:53:56 2017   Router0   CCNA#show flash: 
+Paz 12. Kas 16:58:29 2017   Router0   CCNA#show flash: 
+Paz 12. Kas 17:19:01 2017   Router0   CCNA>enable 
+Paz 12. Kas 17:19:09 2017   Router0   CCNA#copy ?
+Paz 12. Kas 17:19:19 2017   Router0   CCNA#copy running-config startup-config 
+Paz 12. Kas 17:19:37 2017   Router0   CCNA#copy ?
+Paz 12. Kas 17:19:48 2017   Router0   CCNA#copy startup-config ?
+Paz 12. Kas 17:20:22 2017   Router0   CCNA#copy startup-config tftp: 
+Paz 12. Kas 17:21:52 2017   Router0   CCNA#copy ?
+Paz 12. Kas 17:22:00 2017   Router0   CCNA#copy flash: ?
+Paz 12. Kas 17:22:04 2017   Router0   CCNA#copy flash: tftp: 
+Paz 12. Kas 17:24:17 2017   Router0   CCNA#show flash: 
+Paz 12. Kas 17:28:38 2017   Router0   CCNA#copy ?
+Paz 12. Kas 17:28:49 2017   Router0   CCNA#copy flash: ?
+Paz 12. Kas 17:28:57 2017   Router0   CCNA#copy flash: tftp: 
+Paz 12. Kas 17:30:07 2017   Router0   CCNA#copy flash: tftp: 
+Paz 12. Kas 17:32:26 2017   Router0   CCNA#delete ?
+Paz 12. Kas 17:32:34 2017   Router0   CCNA#delete flash: 
+Paz 12. Kas 17:32:55 2017   Router0   CCNA#sh flash: 
+Paz 12. Kas 17:33:16 2017   Router0   CCNA#reload
+Paz 12. Kas 17:34:18 2017   Router0   rommon 1 > ?
+Paz 12. Kas 17:39:27 2017   Switch0   Switch>en
+Paz 12. Kas 17:39:29 2017   Switch0   Switch#conf ter
+Paz 12. Kas 17:39:39 2017   Switch0   Switch(config)#interface fastEthernet 0/1
+Paz 12. Kas 17:39:44 2017   Switch0   Switch(config-if)#spanning-tree portfast 
+Paz 12. Kas 17:39:55 2017   Switch0   Switch(config-if)#exit
+Paz 12. Kas 17:39:58 2017   Switch0   Switch(config)#interface fastEthernet 0/2
+Paz 12. Kas 17:40:01 2017   Switch0   Switch(config-if)#spanning-tree portfast 
+Paz 12. Kas 17:40:14 2017   Switch0   Switch(config-if)#interface fastEthernet 0/3
+Paz 12. Kas 17:40:15 2017   Switch0   Switch(config-if)#spanning-tree portfast 
+Paz 12. Kas 17:43:01 2017   Router0   rommon 2 > tftpdnld
+Paz 12. Kas 17:44:21 2017   Router0   rommon 3 > IP_ADDRESS=192.168.100.142
+Paz 12. Kas 17:44:54 2017   Router0   rommon 4 > IP_SUBNET_MASK=255.255.255.240
+Paz 12. Kas 17:45:24 2017   Router0   rommon 5 > DEFAULT_GATEWAY=192.168.100.142
+Paz 12. Kas 17:45:44 2017   Router0   rommon 6 > TFTP_SERVER=192.168.100.129
+Paz 12. Kas 17:46:05 2017   Router0   rommon 7 > TFTP_FILE=c2800nm-advipservicesk9-mz.124-15.T1.bin
+Paz 12. Kas 17:46:32 2017   Router0   rommon 8 > tftpdnld
+Paz 12. Kas 17:47:40 2017   Router0   rommon 9 > ?
+Paz 12. Kas 17:47:52 2017   Router0   rommon 10 > reset
+Paz 12. Kas 17:48:50 2017   Router0   CCNA>enable 
+Paz 12. Kas 17:48:57 2017   Router0   CCNA#show flash: 
+Paz 12. Kas 18:18:15 2017   Router1   rommon 1 > tdtpdnld
+Paz 12. Kas 18:18:21 2017   Router1   rommon 2 > tftpdnld
+Paz 12. Kas 18:21:22 2017   Router0   CCNA>en
+Paz 12. Kas 18:21:28 2017   Router0   CCNA#sh flash: 

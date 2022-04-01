@@ -1,0 +1,49 @@
+SSH  22 nolu TCP portu üzerinden RSA algoritmasý ile þifreli veri gönderimi
+gerçekleþtirir.
+
+1- Cihaz adý "Router" isminden farklý olmalý
+ 
+ Router(config)#hostname KADIKOY
+ KADIKOY(config)#
+
+2- Cihaz bir domain'e dahil edilir.
+ KADIKOY(config)#ip domain-name cisco.com 
+
+Bu komuttan sonra cihaz aðda KADIKOY.cisco.com  adý ile tekil olarak ulaþýlabilir.
+
+3- Þifrelemede kullanýlacak olan key'ler üretilir.
+
+KADIKOY(config)#crypto key generate rsa
+
+360 ile 2048 bir arasýnda þifreleme anahtarlarý oluþturulur.
+768 bit üzeri SSH v2 olarak kullanýlýr.
+
+4- Cihaza giriþ yaparken gerekli olacak username ve password çiftleri oluþturulur.
+
+KADIKOY(config)#username admin password 123456      gibi....
+KADIKOY(config)#username supervisor password cisco 
+
+5- Cihaza sadece telnet yada sadece SSH ile baðlanýlmasý istenirse
+
+KADIKOY(config)#line vty 0 4
+KADIKOY(config-line)#transport input SSH   --- Bu komut ile cihaza sadece SSH baðlantýsý yapýlýr.
+
+KADIKOY(config-line)#transport input telnet    Bu komut ile cihaza sadece telnet
+						baðlantýsý yapýlýr.
+
+
+KADIKOY(config-line)#transport input all     Tüm baðlantý türleri etkin olur.
+
+
+
+Packet Tracer programýnda PC ile yapýlan SSH ayarýnýn test edilmesi için
+PC'de komut satýrýnda aþaðýdaki komut kullanýlýr.
+
+PC>SSH -l supervisor 192.168.1.254
+
+
+
+
+
+
+

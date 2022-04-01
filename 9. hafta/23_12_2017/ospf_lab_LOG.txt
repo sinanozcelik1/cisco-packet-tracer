@@ -1,0 +1,280 @@
+Cmt 23. Ara 18:38:18 2017   Merkez   Router>en
+Cmt 23. Ara 18:38:21 2017   Merkez   Router#conf ter
+Cmt 23. Ara 18:38:37 2017   Merkez   Router(config)#int fastEthernet 0/0
+Cmt 23. Ara 18:38:40 2017   Merkez   Router(config-if)#no shutdown 
+Cmt 23. Ara 18:38:52 2017   Merkez   Router(config-if)#ip address 192.168.100.1 255.255.255.0
+Cmt 23. Ara 18:38:55 2017   Merkez   Router(config-if)#exit
+Cmt 23. Ara 18:39:02 2017   Merkez   Router(config)#router ospf ?
+Cmt 23. Ara 18:39:21 2017   Merkez   Router(config)#router ospf 5
+Cmt 23. Ara 18:39:23 2017   Merkez   Router(config-router)#?
+Cmt 23. Ara 18:40:31 2017   Merkez   Router(config-router)#router-id ?
+Cmt 23. Ara 18:40:40 2017   Merkez   Router(config-router)#router-id 1.1.40.40
+Cmt 23. Ara 18:40:54 2017   Merkez   Router(config-router)#auto-cost ?
+Cmt 23. Ara 18:41:07 2017   Merkez   Router(config-router)#auto-cost reference-bandwidth ?
+Cmt 23. Ara 18:41:46 2017   Merkez   Router(config-router)#?
+Cmt 23. Ara 18:41:54 2017   Merkez   Router(config-router)#distance ?
+Cmt 23. Ara 18:42:04 2017   Merkez   Router(config-router)#distance ospf ?
+Cmt 23. Ara 18:42:23 2017   Merkez   Router(config-router)#?
+Cmt 23. Ara 18:42:28 2017   Merkez   Router(config-router)#passive-interface ?
+Cmt 23. Ara 18:42:37 2017   Merkez   Router(config-router)#passive-interface gigabitEthernet 1/0
+Cmt 23. Ara 18:42:47 2017   Merkez   Router(config-router)#?
+Cmt 23. Ara 18:42:53 2017   Merkez   Router(config-router)#area ?
+Cmt 23. Ara 18:43:12 2017   Merkez   Router(config-router)#area 0 ?
+Cmt 23. Ara 18:43:37 2017   Merkez   Router(config-router)#area 0 range ?
+Cmt 23. Ara 18:43:44 2017   Merkez   Router(config-router)#area 0 range 192.168.0.0 ?
+Cmt 23. Ara 18:44:24 2017   Merkez   Router(config-router)#area ?
+Cmt 23. Ara 18:44:27 2017   Merkez   Router(config-router)#area 0 ?
+Cmt 23. Ara 18:44:35 2017   Merkez   Router(config-router)#area 0 authentication ?
+Cmt 23. Ara 18:44:59 2017   Merkez   Router(config-router)#area 0 ?
+Cmt 23. Ara 18:45:06 2017   Merkez   Router(config-router)#area 0 virtual-link ?
+Cmt 23. Ara 18:45:31 2017   Merkez   Router(config-router)#area 0 ?
+Cmt 23. Ara 18:45:44 2017   Merkez   Router(config-router)#area 1 ?
+Cmt 23. Ara 18:45:47 2017   Merkez   Router(config-router)#area 1 stub ?
+Cmt 23. Ara 18:46:17 2017   Merkez   Router(config-router)#?
+Cmt 23. Ara 18:46:58 2017   Merkez   Router(config-router)#network 192.168.100.0 0.0.0.255 ?
+Cmt 23. Ara 18:47:03 2017   Merkez   Router(config-router)#network 192.168.100.0 0.0.0.255 area ?
+Cmt 23. Ara 18:47:25 2017   Merkez   Router(config-router)#network 192.168.100.0 0.0.0.255 area 0
+Cmt 23. Ara 18:47:53 2017   Merkez   Router#sh ip ospf neighbor 
+Cmt 23. Ara 18:48:01 2017   Merkez   Router#sh ip ospf database 
+Cmt 23. Ara 18:48:17 2017   Merkez   Router#sh ip protocols 
+Cmt 23. Ara 18:48:30 2017   Merkez   Router#sh ip ospf interface 
+Cmt 23. Ara 18:49:05 2017   Merkez   Router#sh ip ospf interface 
+Cmt 23. Ara 18:49:07 2017   Merkez   Router#sh ip ospf interface 
+Cmt 23. Ara 18:49:10 2017   Merkez   Router#sh ip ospf interface 
+Cmt 23. Ara 18:49:12 2017   Merkez   Router#sh ip ospf interface 
+Cmt 23. Ara 18:49:14 2017   Merkez   Router#sh ip ospf interface 
+Cmt 23. Ara 18:49:15 2017   Merkez   Router#sh ip ospf interface 
+Cmt 23. Ara 18:51:04 2017   Sube2   Router>conf ter
+Cmt 23. Ara 18:51:06 2017   Sube2   Router>enable 
+Cmt 23. Ara 18:51:08 2017   Sube2   Router#conf ter
+Cmt 23. Ara 18:51:15 2017   Sube2   Router(config)#interface loopback ?
+Cmt 23. Ara 18:51:22 2017   Sube2   Router(config)#interface loopback 999
+Cmt 23. Ara 18:51:51 2017   Sube2   Router(config-if)#ip address 1.0.0.1 255.255.255.255
+Cmt 23. Ara 18:52:00 2017   Sube2   Router(config-if)#interface loopback 1000
+Cmt 23. Ara 18:52:05 2017   Sube2   Router(config-if)#ip address 1.0.0.2 255.255.255.255
+Cmt 23. Ara 18:52:09 2017   Sube2   Router(config-if)#interface loopback 1001
+Cmt 23. Ara 18:52:15 2017   Sube2   Router(config-if)#ip address 1.0.0.3 255.255.255.255
+Cmt 23. Ara 18:52:22 2017   Sube2   Router(config-if)#exit
+Cmt 23. Ara 18:52:32 2017   Sube2   Router(config)#interface fastEthernet 0/0
+Cmt 23. Ara 18:52:35 2017   Sube2   Router(config-if)#no shutdown 
+Cmt 23. Ara 18:52:52 2017   Sube2   Router(config-if)#ip address 192.168.100.2 255.255.255.0
+Cmt 23. Ara 18:52:54 2017   Sube2   Router(config-if)#exit
+Cmt 23. Ara 18:53:54 2017   Sube2   Router(config)#router ospf 5
+Cmt 23. Ara 18:54:11 2017   Sube2   Router(config-router)#network 192.168.100.0 0.0.0.255 area 0
+Cmt 23. Ara 18:56:06 2017   Merkez   Router#sh ip ospf neighbor 
+Cmt 23. Ara 18:56:26 2017   Sube2   Router#sh ip ospf neighbor 
+Cmt 23. Ara 18:56:56 2017   Sube3   Router>en
+Cmt 23. Ara 18:56:58 2017   Sube3   Router#conf tr
+Cmt 23. Ara 18:57:00 2017   Sube3   Router#conf terminal 
+Cmt 23. Ara 18:57:06 2017   Sube3   Router(config)#interface fastEthernet 0/0
+Cmt 23. Ara 18:57:22 2017   Sube3   Router(config-if)#ip address 192.168.100.3 255.255.255.0
+Cmt 23. Ara 18:57:31 2017   Sube3   Router(config-if)#ip ospf priority ?
+Cmt 23. Ara 18:57:47 2017   Sube3   Router(config-if)#ip ospf priority 100
+Cmt 23. Ara 18:57:58 2017   Sube3   Router(config-if)#exit
+Cmt 23. Ara 18:58:07 2017   Sube3   Router(config)#router ospf 5
+Cmt 23. Ara 18:58:50 2017   Sube3   Router(config-router)#exit
+Cmt 23. Ara 18:58:54 2017   Sube3   Router(config)#interface fastEthernet 0/0
+Cmt 23. Ara 18:58:56 2017   Sube3   Router(config-if)#no shutdown 
+Cmt 23. Ara 18:59:00 2017   Sube3   Router(config-if)#exit
+Cmt 23. Ara 18:59:03 2017   Sube3   Router(config)#router ospf 5
+Cmt 23. Ara 18:59:29 2017   Sube3   Router(config-router)#network 192.168.100.0 0.0.0.255 area 0
+Cmt 23. Ara 18:59:35 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:41 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:42 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:44 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:45 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:46 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:52 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:53 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:53 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:54 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:55 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:55 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:55 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 18:59:56 2017   Sube3   Router#conf terminal 
+Cmt 23. Ara 18:59:56 2017   Sube3   Router(config)#network 192.168.100.0 0.0.0.255 area 0
+Cmt 23. Ara 19:00:00 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:00:01 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:00:04 2017   Sube3   Router#CONF TER
+Cmt 23. Ara 19:00:12 2017   Sube3   Router(config)#router ospf 5
+Cmt 23. Ara 19:00:20 2017   Sube3   Router(config-router)#router-id 192.168.100.3
+Cmt 23. Ara 19:00:22 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:00:25 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:00:29 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:00:30 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:00:32 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:00:33 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:00:34 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:00:35 2017   Sube3   Router#sh ip os NEighbor 
+Cmt 23. Ara 19:01:41 2017   Sube3   Router#sh ip ospf interface 
+Cmt 23. Ara 19:02:19 2017   Merkez   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:05:11 2017   Sube4   Router>enable 
+Cmt 23. Ara 19:05:17 2017   Sube4   Router#conf ter
+Cmt 23. Ara 19:05:22 2017   Sube4   Router(config)#int fastEthernet 0/0
+Cmt 23. Ara 19:05:25 2017   Sube4   Router(config-if)#no shutdown 
+Cmt 23. Ara 19:05:34 2017   Sube4   Router(config-if)#ip address 192.168.100.4 255.255.255.0
+Cmt 23. Ara 19:05:36 2017   Sube4   Router(config-if)#exit
+Cmt 23. Ara 19:05:44 2017   Sube4   Router(config)#router ospf 5
+Cmt 23. Ara 19:06:04 2017   Sube4   Router(config-router)#network 192.168.100.0 0.0.0.255 area 0
+Cmt 23. Ara 19:06:13 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:06:17 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:06:19 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:06:21 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:06:24 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:06:25 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:06:27 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:06:41 2017   Sube1   Router>en
+Cmt 23. Ara 19:06:43 2017   Sube1   Router#conf ter
+Cmt 23. Ara 19:07:40 2017   Sube1   Router(config)#interface fastEthernet 0/0
+Cmt 23. Ara 19:07:42 2017   Sube1   Router(config-if)#no shutdown 
+Cmt 23. Ara 19:07:53 2017   Sube1   Router(config-if)#ip address 192.168.100.5 255.255.255.0
+Cmt 23. Ara 19:07:55 2017   Sube1   Router(config-if)#exit
+Cmt 23. Ara 19:07:58 2017   Sube1   Router(config)#router ospf 5
+Cmt 23. Ara 19:08:11 2017   Sube1   Router(config-router)#network 192.168.100.0 0.0.0.255 area 0
+Cmt 23. Ara 19:08:15 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:20 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:23 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:27 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:30 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:34 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:37 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:38 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:45 2017   Sube1   Router#en
+Cmt 23. Ara 19:08:47 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:56 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:57 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:58 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:08:59 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:09:23 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:09:23 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:09:44 2017   Sube1   Router#sh ip ospf interface 
+Cmt 23. Ara 19:10:00 2017   Sube3   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:12:55 2017   Sube2   Router>en
+Cmt 23. Ara 19:13:00 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:13:14 2017   Sube1   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:13:24 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:13:41 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:13:44 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:13:47 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:01 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:08 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:13 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:15 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:16 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:17 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:18 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:19 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:20 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:21 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:22 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:23 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:24 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:25 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:28 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:14:32 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:34 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:35 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:36 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:37 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:38 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:39 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:40 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:41 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:42 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:14:44 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:15:22 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:25 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:27 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:37 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:39 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:42 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:44 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:47 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:48 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:49 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:50 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:50 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:51 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:52 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:53 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:53 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:54 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:55 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:58 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:58 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:59 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:19:59 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:20:00 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:20:18 2017   Switch0   Switch>en
+Cmt 23. Ara 19:20:20 2017   Switch0   Switch#conf ter
+Cmt 23. Ara 19:21:11 2017   Switch0   Switch(config)#spanning-tree ?
+Cmt 23. Ara 19:21:16 2017   Switch0   Switch(config)#spanning-tree mode ?
+Cmt 23. Ara 19:21:23 2017   Switch0   Switch(config)#spanning-tree ?
+Cmt 23. Ara 19:21:29 2017   Switch0   Switch(config)#spanning-tree portfast ?
+Cmt 23. Ara 19:21:43 2017   Switch0   Switch(config)#spanning-tree portfast default 
+Cmt 23. Ara 19:22:39 2017   Merkez   Router>en
+Cmt 23. Ara 19:22:42 2017   Merkez   Router#conf ter
+Cmt 23. Ara 19:22:48 2017   Merkez   Router(config)#int fastEthernet 0/0
+Cmt 23. Ara 19:22:56 2017   Merkez   Router(config-if)#ip ospf priority 101
+Cmt 23. Ara 19:23:18 2017   Switch0   Switch(config)#int range fa1 0/1-5
+Cmt 23. Ara 19:23:23 2017   Switch0   Switch(config)#int range fa 0/1-5
+Cmt 23. Ara 19:23:27 2017   Switch0   Switch(config-if-range)#shutdown 
+Cmt 23. Ara 19:23:41 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:23:56 2017   Switch0   Switch(config-if-range)#no shutdown 
+Cmt 23. Ara 19:23:59 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:02 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:05 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:06 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:07 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:11 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:12 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:13 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:14 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:15 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:16 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:17 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:18 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:19 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:20 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:21 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:22 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:22 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:23 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:24 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:24 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:25 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:25 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:26 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:26 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:27 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:27 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:28 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:28 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:29 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:29 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:30 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:30 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:31 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:31 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:32 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:32 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:33 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:33 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:34 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:34 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:35 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:35 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:36 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:37 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:38 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:43 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:24:58 2017   Sube2   Router#sh ip  ospf neighbor 
+Cmt 23. Ara 19:25:36 2017   Sube2   Router#conf ter
+Cmt 23. Ara 19:25:56 2017   Sube2   Router(config)#router ospf 5
+Cmt 23. Ara 19:26:17 2017   Sube2   Router(config-router)#network 1.0.0.0 0.0.0.255 area 0
+Cmt 23. Ara 19:33:04 2017   Sube1   Router>en
+Cmt 23. Ara 19:33:15 2017   Sube1   Router#sh ip route 
+Cmt 23. Ara 19:33:38 2017   Merkez   Router#sh ip route 
+Cmt 23. Ara 19:36:57 2017   Merkez   Router#sh ip ospf interface 
+Cmt 23. Ara 19:37:21 2017   Sube4   Router#sh ip ospf neighbor 
+Cmt 23. Ara 19:37:27 2017   Sube4   Router#sh ip ospf interface 

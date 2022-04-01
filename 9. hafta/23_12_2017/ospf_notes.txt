@@ -1,0 +1,33 @@
+224.0.0.5      10sn
+224.0.0.6 (DR&BDR)
+
+
+
+224.0.0.10       5sn
+
+D*EX
+
+O*E2
+
+
+E1  	   Ospf otonom sistemi içinde geçilen yollarýn metric deðerleri toplanýr.
+E2(Default)Ospf otonom sistemi içinde geçilen yollarýn metric deðerleri toplanmaz.
+
+
+router ospf 1
+redistribute rip
+.
+.
+.
+
+
+router rip
+redistribute ospf
+
+
+
+
+
+
+
+

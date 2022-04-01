@@ -1,0 +1,107 @@
+ 
+   IPv4 32 Bit = 4 byte
+   
+
+	
+		      1Oktet.2Oktet.3Oktet.4Oktet
+			8bit.  8bit.  8bit.  8bit
+
+		
+		00000000=0
+		11111111=255
+
+			1.Oktet	  	 Private		Subnet Mask(Default Mask)
+	    
+	A		1-126	  10.0.0.0  -10.255.255.255 	255.0.0.0     /8  N.H.H.H
+	B		128-191  172.16.0.0 -172.31.255.255	255.255.0.0   /16 N.N.H.H
+	C		192-223  192.168.0.0-192.168.255.255 	255.255.255.0 /24 N.N.N.H
+	D(Multicast)	224-239 
+	E		240-255
+
+N=Network
+H=Host
+	
+
+
+
+
+			192.168.100.0/24 Network ID
+
+			192.168.100.1 - 192.168.1.254   254 Tane Ip adresi
+
+			192.168.100.255 Broadcast ID
+
+
+ 			2 üzeri host biti sayýsý -2 =Host Sayýsý
+
+			255.255.255.00000000
+
+			
+
+		
+		
+
+		10.10.10.0/24
+		
+
+	
+		
+
+
+
+
+D(Multicast)	224-239 
+	E	240-255
+
+
+        127.0.0.0 - 127.255.255.255 Local Loopback
+	169.254.0.0 - 169.254.255.255 APIPA
+
+        TCP/IP Protokolü içinde reserve edilmiþ blok.
+        Automatic
+        Private
+        IP
+	Addressing
+
+
+ 				AA:BC:DE:FF:11:02
+		one-to-one	unicast
+		one-to-many	multicast  224.0.0.5 224.0.0.6
+		one-to-all	broadcast FF:FF:FF:FF:FF:FF
+
+    
+		Private=Inside=Local=LAN
+
+		Public=Outside=Global=WAN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+There are 10 kinds of people who understands binary and others
+
+
+
+			
+			IPv6 = 128bit Hexadecimal
+			1Hextet:2Hextet:3Hextet:4Hextet:5Hextet:6Hextet:7Hextet:8Hextet
+	   AAAA:
+    1010 1010 1010 1010
+
+ 

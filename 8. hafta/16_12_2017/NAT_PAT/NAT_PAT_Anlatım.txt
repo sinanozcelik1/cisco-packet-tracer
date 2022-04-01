@@ -1,0 +1,73 @@
+1- NAT (Birebir Ýç IP - Dýþ IP eþleþtirmesi)
+interface FastEthernet0/0
+ ip address 85.105.45.22 255.255.255.252
+ ip nat outside
+interface FastEthernet0/1
+ ip address 10.10.10.254 255.255.255.0
+ ip nat inside
+
+ip nat inside source static tcp 10.10.10.80 80 85.105.45.22 80   NAT
+ip nat inside source static udp 10.10.10.53 53 85.105.45.22 53   NAT
+ip nat inside source static tcp 10.10.10.80 21 85.105.45.22 21   NAT
+
+
+
+2- PAT (Ýç networkteki tüm cihazlar dýþ IP adresine(FastEthernet0/0) overload yapýlarak internete çýkar.)
+interface FastEthernet0/0
+ ip address 85.105.45.22 255.255.255.252
+ ip nat outside
+interface FastEthernet0/1
+ ip address 10.10.10.254 255.255.255.0
+ ip nat inside
+
+ip nat inside source list 34 interface FastEthernet0/0 overload   PAT için gerekli config
+access-list 34 permit 10.10.10.0 0.0.0.255
+access-list 34 permit 10.10.11.0 0.0.0.255
+access-list 34 permit 10.10.12.0 0.0.0.255
+access-list 34 permit 10.10.13.0 0.0.0.255
+
+
+3- Dynamic NAT
+interface FastEthernet0/0
+ ip address 85.105.45.22 255.255.255.252
+ ip nat outside
+interface FastEthernet0/1
+ ip address 10.10.10.254 255.255.255.0
+ ip nat inside
+
+ip nat pool kadikoy 85.105.45.23 85.105.45.30 netmask 255.255.255.224 (Global-Public Ip adreslerinin olduðu pool tanýmlanýr)
+
+ip nat inside source list 34 pool kadikoy  (34 nolu ACL'e uyanlar kadikoy isimli pool'dan IP alarak internete çýkar.)
+
+access-list 34 permit 10.10.10.0 0.0.0.255
+access-list 34 permit 10.10.11.0 0.0.0.255
+access-list 34 permit 10.10.12.0 0.0.0.255
+access-list 34 permit 10.10.13.0 0.0.0.255
+
+
+
+4- Pool Overload
+
+interface FastEthernet0/0
+ ip address 85.105.45.22 255.255.255.252
+ ip nat outside
+interface FastEthernet0/1
+ ip address 10.10.10.254 255.255.255.0
+ ip nat inside
+
+
+ip nat pool BJK 85.105.45.20 85.105.45.20 netmask 255.255.255.224
+ip nat inside source list 34 pool BJK overload   			PAT için gerekli config
+
+access-list 34 permit 10.10.10.0 0.0.0.255
+
+
+
+
+
+
+
+
+
+
+

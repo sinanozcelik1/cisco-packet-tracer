@@ -1,0 +1,55 @@
+OSI Referans Modeli (Hardware Based)
+
+7 Application  https,http,ftp,pop3(110),smtp(25,587),
+6 Presentation ASCII,UTF-8,pdf,jpg,txt 
+5 Session      DNS,alan adlarý
+4 Transport (TCP,UDP)(Firewall)
+3 Network   (IP)(Router)
+2 Data-Link (MAC)(Switch)
+1 Physical   (Kablo,Connector(RJ-45),SFP Modül)  11001011110000
+
+CCNA Routing&Switching
+TCP/IP (Software Based)  DoD 
+
+
+                IETF
+		IEEE 802.3   802.11 a/b/g/n/ac     802.1Q    802.1d   802.1w 
+
+
+
+                WiFi
+
+
+Broadcast Packet Layer2: FFFF:FFFF:FFFF
+
+
+Destinaiton Mac Adresi FFFF:FFFF:FFFF yazarsa Aldýðý port hariç tüm portlara
+Broadcast mesaj olarak gönderir.
+
+
+  TCP/UDP  1-65535
+  
+  
+  	http	80
+	https	443
+	ftp	21
+	ssh	22
+	telnet	23
+	smtp	25,587
+	pop3	110
+	dhcp	67(server),68(client)
+	DNS	53 TCP / UDP
+	SNMP    161
+
+
+
+	
+
+	ARP --->Address Resolution Protocol
+
+ IP adresi biline bir cihazýn MAC adresini öðrenmek için Broadcast
+ olarak gönderilen paket.
+
+ ARP Request
+
+ ARP Response

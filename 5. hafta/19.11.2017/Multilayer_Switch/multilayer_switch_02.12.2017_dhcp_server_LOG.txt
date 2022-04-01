@@ -1,0 +1,31 @@
+Cmt 2. Ara 14:13:49 2017   Local Switch   Switch>en
+Cmt 2. Ara 14:13:54 2017   Local Switch   Switch#sh ip dhcp binding 
+Cmt 2. Ara 14:14:16 2017   Local Switch   Switch#sh running-config 
+Cmt 2. Ara 14:26:12 2017   Local Switch   Switch#conf ter
+Cmt 2. Ara 14:26:21 2017   Local Switch   Switch(config)#no ip dhcp pool FENER_Pool
+Cmt 2. Ara 14:26:21 2017   Local Switch   Switch(config)#no ip dhcp pool BJK_Pool
+Cmt 2. Ara 14:26:21 2017   Local Switch   Switch(config)#no ip dhcp pool TRZ_Pool
+Cmt 2. Ara 14:26:21 2017   Local Switch   Switch(config)#no ip dhcp pool ESK_Pool
+Cmt 2. Ara 14:26:21 2017   Local Switch   Switch(config)#no ip dhcp pool GZT_Pool
+Cmt 2. Ara 14:26:27 2017   Local Switch   Switch#sh running-config 
+Cmt 2. Ara 14:26:36 2017   Local Switch   Switch#sh running-config 
+Cmt 2. Ara 14:27:10 2017   Local Switch   Switch#conf ter
+Cmt 2. Ara 14:27:12 2017   Local Switch   Switch(config)#no ip dhcp excluded-address 192.168.1.254
+Cmt 2. Ara 14:27:13 2017   Local Switch   Switch(config)#no ip dhcp excluded-address 192.168.1.1 192.168.1.50
+Cmt 2. Ara 14:27:17 2017   Local Switch   Switch#wr
+Cmt 2. Ara 14:27:19 2017   Local Switch   Switch#sh running-config 
+Cmt 2. Ara 14:35:48 2017   Local Switch   Switch#conf ter
+Cmt 2. Ara 14:35:55 2017   Local Switch   Switch(config)#interface Vlan1
+Cmt 2. Ara 14:35:57 2017   Local Switch   Switch(config-if)#ip ?
+Cmt 2. Ara 14:36:25 2017   Local Switch   Switch(config-if)#ip helper-address ?
+Cmt 2. Ara 14:36:41 2017   Local Switch   Switch(config-if)#ip helper-address 192.168.50.20
+Cmt 2. Ara 14:37:04 2017   Local Switch   Switch(config-if)#exit
+Cmt 2. Ara 14:37:07 2017   Local Switch   Switch(config)#interface Vlan60
+Cmt 2. Ara 14:37:10 2017   Local Switch   Switch(config-if)#ip helper-address 192.168.50.20
+Cmt 2. Ara 14:38:30 2017   Local Switch   Switch#sh running-config 
+Cmt 2. Ara 14:39:13 2017   Local Switch   Switch#conf ter
+Cmt 2. Ara 14:39:17 2017   Local Switch   Switch(config)#interface fastEthernet 0/1
+Cmt 2. Ara 14:39:19 2017   Local Switch   Switch(config-if)#ip helper-address 192.168.50.20
+Cmt 2. Ara 14:39:23 2017   Local Switch   Switch(config-if)#interface fastEthernet 0/2
+Cmt 2. Ara 14:39:25 2017   Local Switch   Switch(config-if)#ip helper-address 192.168.50.20
+Cmt 2. Ara 14:39:31 2017   Local Switch   Switch#sh running-config 

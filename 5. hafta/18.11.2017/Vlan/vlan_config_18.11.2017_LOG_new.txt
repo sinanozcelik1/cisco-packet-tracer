@@ -1,0 +1,106 @@
+Cmt 18. Kas 16:50:42 2017   Switch0   Switch>enable 
+Cmt 18. Kas 16:50:53 2017   Switch0   Switch#sh running-config 
+Cmt 18. Kas 16:54:44 2017   Switch0   Switch#conf ter
+Cmt 18. Kas 16:55:13 2017   Router0   Router>en
+Cmt 18. Kas 16:55:34 2017   Switch0   Switch(config)#Vlan ?
+Cmt 18. Kas 16:55:42 2017   Switch0   Switch(config)#Vlan 1
+Cmt 18. Kas 16:55:45 2017   Switch0   Switch(config-vlan)#?
+Cmt 18. Kas 16:55:54 2017   Switch0   Switch(config-vlan)#name Kadikoy
+Cmt 18. Kas 16:57:23 2017   Switch0   Switch(config-vlan)#exit
+Cmt 18. Kas 16:57:31 2017   Switch0   Switch(config)#Vlan 10
+Cmt 18. Kas 16:57:37 2017   Switch0   Switch(config-vlan)#name ARGE
+Cmt 18. Kas 16:57:39 2017   Switch0   Switch(config-vlan)#exit
+Cmt 18. Kas 16:57:42 2017   Switch0   Switch(config)#vlan 20
+Cmt 18. Kas 16:57:46 2017   Switch0   Switch(config-vlan)#name IT
+Cmt 18. Kas 16:57:48 2017   Switch0   Switch(config-vlan)#exit
+Cmt 18. Kas 16:57:53 2017   Switch0   Switch(config)#vlan 30
+Cmt 18. Kas 16:58:01 2017   Switch0   Switch(config-vlan)#name CALL_CENTER
+Cmt 18. Kas 16:58:02 2017   Switch0   Switch(config-vlan)#exit
+Cmt 18. Kas 16:58:14 2017   Switch0   Switch(config)#exit
+Cmt 18. Kas 16:58:16 2017   Switch0   Switch#wr
+Cmt 18. Kas 16:58:30 2017   Switch0   Switch#sh flash: 
+Cmt 18. Kas 16:59:06 2017   Switch1   Switch>en
+Cmt 18. Kas 16:59:11 2017   Switch1   Switch#sh flash: 
+Cmt 18. Kas 16:59:42 2017   Switch0   Switch#sh vlan brief 
+Cmt 18. Kas 17:02:27 2017   Switch0   Switch#conf 
+Cmt 18. Kas 17:02:35 2017   Switch0   Switch(config)#interface fastEthernet 0/1
+Cmt 18. Kas 17:02:48 2017   Switch0   Switch(config-if)#switchport access vlan ?
+Cmt 18. Kas 17:02:56 2017   Switch0   Switch(config-if)#switchport access vlan 10
+Cmt 18. Kas 17:03:13 2017   Switch0   Switch(config-if)#do sh vlan brief
+Cmt 18. Kas 17:03:39 2017   Switch0   Switch(config-if)#interface fastEthernet 0/2
+Cmt 18. Kas 17:03:41 2017   Switch0   Switch(config-if)#switchport access vlan 10
+Cmt 18. Kas 17:03:44 2017   Switch0   Switch(config-if)#interface fastEthernet 0/3
+Cmt 18. Kas 17:03:46 2017   Switch0   Switch(config-if)#switchport access vlan 10
+Cmt 18. Kas 17:03:48 2017   Switch0   Switch(config-if)#interface fastEthernet 0/4
+Cmt 18. Kas 17:03:50 2017   Switch0   Switch(config-if)#switchport access vlan 10
+Cmt 18. Kas 17:03:52 2017   Switch0   Switch(config-if)#interface fastEthernet 0/5
+Cmt 18. Kas 17:03:54 2017   Switch0   Switch(config-if)#switchport access vlan 10
+Cmt 18. Kas 17:03:57 2017   Switch0   Switch(config-if)#interface fastEthernet 0/6
+Cmt 18. Kas 17:04:00 2017   Switch0   Switch(config-if)#switchport access vlan 10
+Cmt 18. Kas 17:04:33 2017   Switch0   Switch(config-if)#exit
+Cmt 18. Kas 17:04:59 2017   Switch0   Switch(config)#interface range fastEthernet 0/7-12
+Cmt 18. Kas 17:05:22 2017   Switch0   Switch(config-if-range)#switchport access vlan 20
+Cmt 18. Kas 17:05:41 2017   Switch0   Switch(config-if-range)#do sh vlan brief
+Cmt 18. Kas 17:05:57 2017   Switch0   Switch(config-if-range)#exit
+Cmt 18. Kas 17:06:10 2017   Switch0   Switch(config)#interface range fastEthernet 0/13-18
+Cmt 18. Kas 17:06:17 2017   Switch0   Switch(config-if-range)#switchport access vlan 30
+Cmt 18. Kas 17:06:20 2017   Switch0   Switch(config-if-range)#exit
+Cmt 18. Kas 17:06:27 2017   Switch0   Switch(config)#interface range fastEthernet 0/19-24
+Cmt 18. Kas 17:06:51 2017   Switch0   Switch(config-if-range)#switchport access vlan 40
+Cmt 18. Kas 17:07:18 2017   Switch0   Switch#sh vlan brief 
+Cmt 18. Kas 17:08:23 2017   Switch0   Switch#sh running-config 
+Cmt 18. Kas 17:52:17 2017   Switch2   Switch>en
+Cmt 18. Kas 17:52:19 2017   Switch2   Switch#conf ter
+Cmt 18. Kas 17:52:25 2017   Switch2   Switch(config)#int fa 0/24
+Cmt 18. Kas 17:52:43 2017   Switch2   Switch(config-if)#switchport ?
+Cmt 18. Kas 17:52:52 2017   Switch2   Switch(config-if)#switchport access ?
+Cmt 18. Kas 17:53:10 2017   Switch2   Switch(config-if)#switchport mode ?
+Cmt 18. Kas 17:53:20 2017   Switch2   Switch(config-if)#switchport mode dynamic ?
+Cmt 18. Kas 17:54:15 2017   Switch2   Switch(config-if)#switchport mode dynamic ?
+Cmt 18. Kas 17:54:21 2017   Switch2   Switch(config-if)#switchport mode ?
+Cmt 18. Kas 17:55:04 2017   Switch2   Switch(config-if)#switchport mode ?
+Cmt 18. Kas 17:55:33 2017   Switch2   Switch(config-if)#switchport mode trunk 
+Cmt 18. Kas 17:58:51 2017   Switch2   Switch(config-if)#exit
+Cmt 18. Kas 17:59:07 2017   Switch2   Switch(config)#interface range fastEthernet 0/1-6
+Cmt 18. Kas 17:59:13 2017   Switch2   Switch(config-if-range)#switchport access vlan 10
+Cmt 18. Kas 18:25:26 2017   Router1   Router>en
+Cmt 18. Kas 18:25:29 2017   Router1   Router#conf ter
+Cmt 18. Kas 18:25:34 2017   Router1   Router(config)#int fastEthernet 0/0
+Cmt 18. Kas 18:25:38 2017   Router1   Router(config-if)#no shutdown 
+Cmt 18. Kas 18:25:43 2017   Router1   Router(config-if)#exit
+Cmt 18. Kas 18:25:59 2017   Router1   Router(config)#interface fastEthernet 0/0.1
+Cmt 18. Kas 18:28:37 2017   Router1   Router(config-subif)#encapsulation dot1Q 1
+Cmt 18. Kas 18:28:43 2017   Router1   Router(config-subif)#do sh run
+Cmt 18. Kas 18:30:36 2017   Router1   Router(config-subif)#ip address 192.168.100.254 255.255.255.224
+Cmt 18. Kas 18:30:58 2017   Router1   Router(config-subif)#exit
+Cmt 18. Kas 18:31:06 2017   Router1   Router(config)#interface fastEthernet 0/0.2
+Cmt 18. Kas 18:31:41 2017   Router1   Router(config-subif)#encapsulation dot1Q 10
+Cmt 18. Kas 18:31:59 2017   Router1   Router(config-subif)#ip address 192.168.100.30 255.255.255.224
+Cmt 18. Kas 18:32:47 2017   Router1   Router(config-subif)#exit
+Cmt 18. Kas 18:32:55 2017   Router1   Router(config)#interface fastEthernet 0/0.3
+Cmt 18. Kas 18:33:04 2017   Router1   Router(config-subif)#encapsulation dot1Q 20
+Cmt 18. Kas 18:33:18 2017   Router1   Router(config-subif)#ip address 192.168.100.62 255.255.255.224
+Cmt 18. Kas 18:33:20 2017   Router1   Router(config-subif)#exit
+Cmt 18. Kas 18:33:24 2017   Router1   Router(config)#interface fastEthernet 0/0.4
+Cmt 18. Kas 18:33:29 2017   Router1   Router(config-subif)#encapsulation dot1Q 30
+Cmt 18. Kas 18:33:42 2017   Router1   Router(config-subif)#ip address 192.168.100.94 255.255.255.224
+Cmt 18. Kas 18:33:47 2017   Router1   Router(config-subif)#interface fastEthernet 0/0.5
+Cmt 18. Kas 18:33:52 2017   Router1   Router(config-subif)#encapsulation dot1Q 40
+Cmt 18. Kas 18:34:08 2017   Router1   Router(config-subif)#ip address 192.168.100.126 255.255.255.224
+Cmt 18. Kas 18:34:11 2017   Router1   Router#sh running-config 
+Cmt 18. Kas 18:35:08 2017   Router1   Router#sh ip int brief 
+Cmt 18. Kas 18:39:50 2017   Switch2   Switch>en
+Cmt 18. Kas 18:39:52 2017   Switch2   Switch#conf ter
+Cmt 18. Kas 18:39:57 2017   Switch2   Switch(config)#int fastEthernet 0/23
+Cmt 18. Kas 18:40:01 2017   Switch2   Switch(config-if)#switchport mode trunk 
+Cmt 18. Kas 18:42:09 2017   Switch2   Switch(config-if)#exit
+Cmt 18. Kas 18:42:13 2017   Switch2   Switch#sh interfaces trunk 
+Cmt 18. Kas 18:42:21 2017   Switch2   Switch#conf ter
+Cmt 18. Kas 18:42:24 2017   Switch2   Switch(config)#vlan 20
+Cmt 18. Kas 18:42:26 2017   Switch2   Switch(config-vlan)#vlan 30
+Cmt 18. Kas 18:42:28 2017   Switch2   Switch(config-vlan)#vlan 40
+Cmt 18. Kas 18:45:59 2017   Switch0   Switch>en
+Cmt 18. Kas 18:46:02 2017   Switch0   Switch#sh mac-address-table 
+Cmt 18. Kas 18:46:25 2017   Router1   Router#sh mac-address-table 
+Cmt 18. Kas 18:46:29 2017   Router1   Router#sh arp 
+Cmt 18. Kas 18:48:23 2017   Switch2   Switch#sh interfaces trunk 

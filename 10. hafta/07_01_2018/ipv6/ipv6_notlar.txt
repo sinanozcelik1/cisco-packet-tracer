@@ -1,0 +1,23 @@
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+A = 10 = 1010
+B = 11 = 1011
+C = 12 = 1100
+D = 13 = 1101
+E = 14 = 1110
+F = 15 = 1111
+
+
+ Unicast one-to-one
+ Multicast one-to-many
+ Broadcast one-to-all  (IPv6'da yok)
+
+ Anycast  one-to-nearest

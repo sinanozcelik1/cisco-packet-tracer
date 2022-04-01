@@ -1,0 +1,492 @@
+Paz 10. Ara 14:09:36 2017   Merkez   Router>en
+Paz 10. Ara 14:09:38 2017   Merkez   Router#conf ter
+Paz 10. Ara 14:09:44 2017   Merkez   Router(config)#int fa 0/0
+Paz 10. Ara 14:09:46 2017   Merkez   Router(config-if)#no shutdown 
+Paz 10. Ara 14:09:59 2017   Merkez   Router(config-if)#ip add 192.168.1.1 255.255.255.252
+Paz 10. Ara 14:10:00 2017   Merkez   Router(config-if)#exit
+Paz 10. Ara 14:10:05 2017   Merkez   Router(config)#int fa 0/1
+Paz 10. Ara 14:10:08 2017   Merkez   Router(config-if)#no shutdown 
+Paz 10. Ara 14:10:15 2017   Merkez   Router(config-if)#ip add 192.168.1.5 255.255.255.252
+Paz 10. Ara 14:10:17 2017   Merkez   Router(config-if)#exit
+Paz 10. Ara 14:10:24 2017   Merkez   Router(config)#int loopback 0
+Paz 10. Ara 14:10:34 2017   Merkez   Router(config-if)#ip add 172.16.16.1 255.255.255.0
+Paz 10. Ara 14:10:38 2017   Merkez   Router(config-if)#int loopback 1
+Paz 10. Ara 14:10:46 2017   Merkez   Router(config-if)#ip add 10.100.100.1 255.255.255.0
+Paz 10. Ara 14:10:49 2017   Merkez   Router(config-if)#int loopback 2
+Paz 10. Ara 14:11:01 2017   Merkez   Router(config-if)#ip add 192.168.2.1 255.255.255.0
+Paz 10. Ara 14:11:03 2017   Merkez   Router#wr
+Paz 10. Ara 14:11:07 2017   Merkez   Router#conf ter
+Paz 10. Ara 14:11:11 2017   Merkez   Router(config)#hostname Merkez
+Paz 10. Ara 14:11:44 2017   Merkez   Merkez(config)#do wr
+Paz 10. Ara 14:11:54 2017   Sube1   Router>en
+Paz 10. Ara 14:11:56 2017   Sube1   Router#conf ter
+Paz 10. Ara 14:12:10 2017   Sube1   Router(config)#hostname Sube1
+Paz 10. Ara 14:12:14 2017   Sube1   Sube1(config)#int fa 0/0
+Paz 10. Ara 14:12:16 2017   Sube1   Sube1(config-if)#no shut
+Paz 10. Ara 14:12:27 2017   Sube1   Sube1(config-if)#ip add 192.168.1.2 255.255.255.252
+Paz 10. Ara 14:12:33 2017   Sube1   Sube1(config-if)#do ping 192.168.1.1
+Paz 10. Ara 14:12:41 2017   Sube1   Sube1(config-if)#exit
+Paz 10. Ara 14:12:47 2017   Sube1   Sube1(config)#int fa 0/1
+Paz 10. Ara 14:12:50 2017   Sube1   Sube1(config-if)#no shut
+Paz 10. Ara 14:13:00 2017   Sube1   Sube1(config-if)#ip add 10.10.10.254 255.255.255.0
+Paz 10. Ara 14:13:04 2017   Sube1   Sube1(config-if)#do wr
+Paz 10. Ara 14:13:24 2017   Sube2   Router>en
+Paz 10. Ara 14:13:29 2017   Sube2   Router#conf ter
+Paz 10. Ara 14:13:32 2017   Sube2   Router(config)#hostname Sube2
+Paz 10. Ara 14:13:35 2017   Sube2   Sube2(config)#int fa 0/1
+Paz 10. Ara 14:13:38 2017   Sube2   Sube2(config-if)#no shutdown 
+Paz 10. Ara 14:13:52 2017   Sube2   Sube2(config-if)#ip add 192.168.1.6 255.255.255.252
+Paz 10. Ara 14:14:00 2017   Sube2   Sube2(config-if)#do ping 192.168.1.5
+Paz 10. Ara 14:14:08 2017   Sube2   Sube2(config-if)#exit
+Paz 10. Ara 14:14:11 2017   Sube2   Sube2(config)#int fa 0/0
+Paz 10. Ara 14:14:14 2017   Sube2   Sube2(config-if)#no shutdown 
+Paz 10. Ara 14:14:46 2017   Sube2   Sube2(config-if)#ip add 172.20.20.30 255.255.255.224
+Paz 10. Ara 14:14:53 2017   Sube2   Sube2(config-if)#do wr
+Paz 10. Ara 14:17:50 2017   Sube1   Sube1(config-if)#exit
+Paz 10. Ara 14:18:15 2017   Sube1   Sube1(config)#router ?
+Paz 10. Ara 14:18:25 2017   Sube1   Sube1(config)#router rip
+Paz 10. Ara 14:18:27 2017   Sube1   Sube1(config-router)#?
+Paz 10. Ara 14:18:47 2017   Sube1   Sube1(config-router)#do sh run
+Paz 10. Ara 14:18:59 2017   Sube1   Sube1(config-router)# ?
+Paz 10. Ara 14:19:37 2017   Sube1   Sube1(config-router)#version 2
+Paz 10. Ara 14:19:48 2017   Sube1   Sube1(config-router)#no auto-summary 
+Paz 10. Ara 14:20:04 2017   Sube1   Sube1(config-router)#network 10.10.10.0
+Paz 10. Ara 14:20:15 2017   Sube1   Sube1(config-router)#network 192.168.1.0 ?
+Paz 10. Ara 14:21:06 2017   Sube1   Sube1(config-router)#network 192.168.1.0
+Paz 10. Ara 14:21:19 2017   Sube1   Sube1#sh running-config 
+Paz 10. Ara 14:24:35 2017   Merkez   Merkez>en
+Paz 10. Ara 14:24:37 2017   Merkez   Merkez#conf ter
+Paz 10. Ara 14:24:40 2017   Merkez   Merkez(config)#router rip
+Paz 10. Ara 14:24:43 2017   Merkez   Merkez(config-router)#no auto-summary 
+Paz 10. Ara 14:24:46 2017   Merkez   Merkez(config-router)#version 2
+Paz 10. Ara 14:24:57 2017   Merkez   Merkez(config-router)#network 192.168.1.0
+Paz 10. Ara 14:25:09 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 14:26:42 2017   Sube1   Sube1#conf ter
+Paz 10. Ara 14:26:46 2017   Sube1   Sube1(config)#int loopback 5
+Paz 10. Ara 14:27:52 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 14:27:55 2017   Sube1   Sube1(config-if)#ip add 10.10.5.1 255.255.255.0
+Paz 10. Ara 14:27:58 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 14:28:56 2017   Sube1   Sube1(config-if)#int loopback 50
+Paz 10. Ara 14:29:11 2017   Sube1   Sube1(config-if)#ip add 10.10.50.129 255.255.255.192
+Paz 10. Ara 14:29:14 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 14:30:56 2017   Sube1   Sube1(config-if)#exit
+Paz 10. Ara 14:31:00 2017   Sube1   Sube1(config)#int loopback 172
+Paz 10. Ara 14:31:34 2017   Sube1   Sube1(config-if)#ip address 172.16.200.175 255.255.255.240
+Paz 10. Ara 14:31:50 2017   Sube1   Sube1(config-if)#ip address 172.16.200.174 255.255.255.240
+Paz 10. Ara 14:32:15 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 14:32:29 2017   Sube1   Sube1(config-if)#exit
+Paz 10. Ara 14:32:48 2017   Merkez   Merkez#conf ter
+Paz 10. Ara 14:32:51 2017   Merkez   Merkez(config)#router rip
+Paz 10. Ara 14:33:12 2017   Merkez   Merkez(config-router)#network 172.16.0.0
+Paz 10. Ara 14:33:28 2017   Merkez   Merkez(config-router)#network 10.0.0.0
+Paz 10. Ara 14:33:35 2017   Merkez   Merkez(config-router)#network 192.168.2.0
+Paz 10. Ara 14:33:46 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 14:34:07 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:34:39 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 14:34:47 2017   Sube1   Sube1#conf ter
+Paz 10. Ara 14:34:51 2017   Sube1   Sube1(config)#router rip
+Paz 10. Ara 14:35:08 2017   Sube1   Sube1(config-router)#network 172.16.200.160
+Paz 10. Ara 14:35:12 2017   Sube1   Sube1#sh running-config 
+Paz 10. Ara 14:35:24 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 14:36:07 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:03 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:04 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:05 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:06 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:07 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:08 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:09 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:09 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:10 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:11 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:12 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:13 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:14 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:15 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:16 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:17 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:20 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:22 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:23 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:24 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:48 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:49 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:37:57 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:07 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:08 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:09 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:10 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:11 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:12 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:12 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:13 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:14 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:15 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:16 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:38:18 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:40:15 2017   Merkez   Merkez#conf ter
+Paz 10. Ara 14:40:32 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:40:33 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:40:34 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:40:36 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:40:37 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:40:38 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:40:41 2017   Merkez   Merkez(config)#no interface loopback 2
+Paz 10. Ara 14:40:45 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:41:02 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:41:20 2017   Sube1   Sube1#sh ip protocols 
+Paz 10. Ara 14:41:49 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:41:58 2017   Sube1   Sube1#sh ip protocols 
+Paz 10. Ara 14:42:16 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:42:32 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:42:40 2017   Merkez   Merkez(config)#interface loopback 2
+Paz 10. Ara 14:42:54 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:42:56 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:43:00 2017   Merkez   Merkez(config-if)#ip add 192.168.2.1 255.255.255.0
+Paz 10. Ara 14:43:03 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:43:47 2017   Merkez   Merkez(config-if)#exit
+Paz 10. Ara 14:43:49 2017   Merkez   Merkez(config)#do sh run
+Paz 10. Ara 14:44:02 2017   Merkez   Merkez(config)#router rip
+Paz 10. Ara 14:44:24 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:27 2017   Merkez   Merkez(config-router)#no network 192.168.2.0
+Paz 10. Ara 14:44:30 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:33 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:34 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:36 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:37 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:39 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:40 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:41 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:43 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:45 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:45 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:46 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:44:47 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:35 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:38 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:52 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:53 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:54 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:55 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:56 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:56 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:57 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:58 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:58 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:45:59 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:00 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:01 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:03 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:04 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:05 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:05 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:06 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:06 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:07 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:07 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:11 2017   Merkez   Merkez(config-router)#network 192.168.2.0
+Paz 10. Ara 14:46:14 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:18 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:19 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:20 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:32 2017   Merkez   Merkez(config-router)#no network 192.168.2.0
+Paz 10. Ara 14:46:34 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:35 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:36 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:37 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:37 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:40 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:41 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:42 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:43 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:44 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:45 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:49 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:49 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:50 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:51 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:52 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:53 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:53 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:57 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:58 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:46:59 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:00 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:00 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:01 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:02 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:03 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:04 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:24 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:26 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:27 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:28 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:28 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:29 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:29 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:30 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:30 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:31 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:32 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:32 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:34 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:36 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:37 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:47:41 2017   Sube1   Sube1#sh ip protocols 
+Paz 10. Ara 14:48:00 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:02 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:19 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:21 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:22 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:24 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:25 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:26 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:27 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:29 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:30 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:31 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:35 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:36 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:37 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:38 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:39 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:40 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:41 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:42 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:46 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:47 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:47 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:48:49 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:00 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:05 2017   Sube1   Sube1#ping 192.168.2.1
+Paz 10. Ara 14:49:12 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:14 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:16 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:17 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:18 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:19 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:20 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:21 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:24 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:27 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:28 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:29 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:30 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:31 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:32 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:49:50 2017   Sube1   Sube1#ping 192.168.2.1
+Paz 10. Ara 14:50:19 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:50:52 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:50:53 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:50:53 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:50:54 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:50:55 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:50:55 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:50:56 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:50:56 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:50:58 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:51:07 2017   Sube1   Sube1#sh ip protocols 
+Paz 10. Ara 14:52:04 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:14 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:15 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:16 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:17 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:18 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:19 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:19 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:20 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:22 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:24 2017   Sube1   Sube1#ping 192.168.2.1
+Paz 10. Ara 14:52:28 2017   Sube1   Sube1#ping 192.168.2.1
+Paz 10. Ara 14:52:29 2017   Sube1   Sube1#ping 192.168.2.1
+Paz 10. Ara 14:52:31 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:49 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:52:51 2017   Sube1   Sube1#ping 192.168.2.1
+Paz 10. Ara 14:52:53 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:53:09 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:53:10 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:53:11 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:53:24 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:53:27 2017   Sube1   Sube1#sh ip rip database 
+Paz 10. Ara 14:55:07 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 14:55:15 2017   Sube1   Sube1#ping 192.168.2.1
+Paz 10. Ara 14:56:02 2017   Sube1   Sube1#conf ter
+Paz 10. Ara 14:56:05 2017   Sube1   Sube1(config)#router rip
+Paz 10. Ara 14:57:27 2017   Sube1   Sube1(config-router)#?
+Paz 10. Ara 15:03:36 2017   Sube1   Sube1(config-router)#timers ?
+Paz 10. Ara 15:03:38 2017   Sube1   Sube1(config-router)#timers basic ?
+Paz 10. Ara 15:04:08 2017   Sube1   Sube1(config-router)#timers basic 5 ?
+Paz 10. Ara 15:04:17 2017   Sube1   Sube1(config-router)#timers basic 5 7 ?
+Paz 10. Ara 15:04:25 2017   Sube1   Sube1(config-router)#timers basic 5 7 5 ?
+Paz 10. Ara 15:06:11 2017   Sube1   Sube1(config-router)#exit
+Paz 10. Ara 15:06:20 2017   Sube2   Sube2>en
+Paz 10. Ara 15:06:31 2017   Sube2   Sube2#conf ter
+Paz 10. Ara 15:06:37 2017   Sube2   Sube2(config)#router rip 
+Paz 10. Ara 15:06:50 2017   Sube2   Sube2(config-router)#version 2
+Paz 10. Ara 15:07:05 2017   Sube2   Sube2(config-router)#network 192.168.1.0
+Paz 10. Ara 15:07:24 2017   Sube2   Sube2(config-router)#network 172.20.20.0
+Paz 10. Ara 15:07:28 2017   Sube2   Sube2#sh running-config 
+Paz 10. Ara 15:07:48 2017   Sube2   Sube2#sh ip route 
+Paz 10. Ara 15:09:37 2017   Merkez   Merkez>en
+Paz 10. Ara 15:09:40 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:10:01 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 15:12:58 2017   Sube2   Sube2#conf ter
+Paz 10. Ara 15:13:01 2017   Sube2   Sube2(config)#router rip
+Paz 10. Ara 15:13:04 2017   Sube2   Sube2(config-router)#no auto-summary 
+Paz 10. Ara 15:13:08 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:13:19 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:13:33 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:13:45 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:13:48 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 15:13:56 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 15:14:00 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 15:14:14 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:14:58 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:15:02 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 15:15:17 2017   Sube1   Sube1#debug ip rip 
+Paz 10. Ara 15:15:24 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:16:11 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:16:18 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 15:17:34 2017   Sube1   Sube1#undebug all 
+Paz 10. Ara 15:17:38 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 15:18:07 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 16:06:32 2017   Sube1   Sube1>enable 
+Paz 10. Ara 16:06:52 2017   Sube1   Sube1#debug ?
+Paz 10. Ara 16:07:49 2017   Sube1   Sube1#debug ip ?
+Paz 10. Ara 16:08:33 2017   Sube1   Sube1#debug ip eigrp 
+Paz 10. Ara 16:08:35 2017   Sube1   Sube1#debug ip eigrp  ?
+Paz 10. Ara 16:08:39 2017   Sube1   Sube1#debug ip eigrp  summary 
+Paz 10. Ara 16:09:00 2017   Sube1   Sube1#debug ip icmp ?
+Paz 10. Ara 16:09:02 2017   Sube1   Sube1#debug ip icmp 
+Paz 10. Ara 16:09:46 2017   Sube1   Sube1#no debug ip icmp 
+Paz 10. Ara 16:09:55 2017   Sube1   Sube1#undebug all 
+Paz 10. Ara 16:10:11 2017   Sube1   Sube1#debug ip rip 
+Paz 10. Ara 16:11:10 2017   Sube1   Sube1#no debug ip rip 
+Paz 10. Ara 16:18:11 2017   Sube1   Sube1#conf ter
+Paz 10. Ara 16:18:16 2017   Sube1   Sube1(config)#router rip 
+Paz 10. Ara 16:18:18 2017   Sube1   Sube1(config-router)#?
+Paz 10. Ara 16:18:36 2017   Sube1   Sube1(config-router)#passive-interface ?
+Paz 10. Ara 16:18:42 2017   Sube1   Sube1(config-router)#passive-interface fastEthernet 0/1
+Paz 10. Ara 16:18:52 2017   Sube1   Sube1(config-router)#passive-interface loopback 5
+Paz 10. Ara 16:18:55 2017   Sube1   Sube1(config-router)#passive-interface loopback 172
+Paz 10. Ara 16:18:59 2017   Sube1   Sube1(config-router)#passive-interface loopback 50
+Paz 10. Ara 16:19:48 2017   Sube1   Sube1#debug ip rip 
+Paz 10. Ara 16:20:32 2017   Sube2   Sube2>en
+Paz 10. Ara 16:20:34 2017   Sube2   Sube2#conf ter
+Paz 10. Ara 16:20:40 2017   Sube2   Sube2(config)#router rip 
+Paz 10. Ara 16:20:50 2017   Sube2   Sube2(config-router)#passive-interface fastEthernet 0/0
+Paz 10. Ara 16:22:06 2017   Sube1   Sube1#undebug all
+Paz 10. Ara 17:23:37 2017   Merkez   Merkez>en
+Paz 10. Ara 17:23:39 2017   Merkez   Merkez#wr
+Paz 10. Ara 17:27:31 2017   ISP   Router>en
+Paz 10. Ara 17:27:33 2017   ISP   Router#onf ter
+Paz 10. Ara 17:27:38 2017   ISP   Router#conf ter
+Paz 10. Ara 17:27:44 2017   ISP   Router(config)#hostname ISP
+Paz 10. Ara 17:27:48 2017   ISP   ISP(config)#int fa 0/0
+Paz 10. Ara 17:27:51 2017   ISP   ISP(config-if)#no shutdown 
+Paz 10. Ara 17:28:05 2017   ISP   ISP(config-if)#ip add 78.68.58.49 255.255.255.252
+Paz 10. Ara 17:28:15 2017   Merkez   Merkez>en
+Paz 10. Ara 17:28:17 2017   Merkez   Merkez#conf ter
+Paz 10. Ara 17:28:28 2017   Merkez   Merkez(config)#int fa 1/1
+Paz 10. Ara 17:28:41 2017   Merkez   Merkez(config-if)#ip add 78.68.58.50 255.255.255.252
+Paz 10. Ara 17:28:53 2017   Merkez   Merkez(config-if)#do ping 78.68.58.49
+Paz 10. Ara 17:28:59 2017   Merkez   Merkez(config-if)#exit
+Paz 10. Ara 17:29:03 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 17:29:17 2017   Merkez   Merkez#conf ter
+Paz 10. Ara 17:29:35 2017   Merkez   Merkez(config)#ip route 0.0.0.0 0.0.0.0 78.68.58.49
+Paz 10. Ara 17:29:40 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 17:30:13 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 17:30:26 2017   Sube2   Sube2#sh ip route 
+Paz 10. Ara 17:30:35 2017   Merkez   Merkez#conf ter
+Paz 10. Ara 17:30:40 2017   Merkez   Merkez(config)#router rip 
+Paz 10. Ara 17:30:42 2017   Merkez   Merkez(config-router)#?
+Paz 10. Ara 17:30:51 2017   Merkez   Merkez(config-router)#default-information ?
+Paz 10. Ara 17:31:15 2017   Merkez   Merkez(config-router)#default-information originate 
+Paz 10. Ara 17:31:20 2017   Sube1   Sube1#sh ip route 
+Paz 10. Ara 17:31:39 2017   Sube2   Sube2#sh ip route 
+Paz 10. Ara 17:32:00 2017   Merkez   Merkez#sh ip route 
+Paz 10. Ara 17:34:52 2017   ISP   ISP#sh ip route 
+Paz 10. Ara 18:58:47 2017   Router1   Router>en
+Paz 10. Ara 19:01:01 2017   Router1   Router#conf ter
+Paz 10. Ara 19:01:08 2017   Router1   Router(config)#int fastEthernet 0/0
+Paz 10. Ara 19:01:20 2017   Router1   Router(config-if)#no shutdown 
+Paz 10. Ara 19:01:31 2017   Router1   Router(config-if)#ip add 192.168.34.254 255.255.255.0
+Paz 10. Ara 19:01:44 2017   Router1   Router(config-if)#int fastEthernet 0/1
+Paz 10. Ara 19:01:47 2017   Router1   Router(config-if)#no shutdown 
+Paz 10. Ara 19:01:58 2017   Router1   Router(config-if)#ip add 172.30.30.254 255.255.255.0
+Paz 10. Ara 19:04:05 2017   Router1   Router#sh ip route 
+Paz 10. Ara 19:06:34 2017   Router1   Router#conf ter
+Paz 10. Ara 19:07:31 2017   Router1   Router(config)#ip ?
+Paz 10. Ara 19:07:49 2017   Router1   Router(config)#access-list ?
+Paz 10. Ara 19:08:26 2017   Router1   Router(config)#access-list 26 ?
+Paz 10. Ara 19:08:53 2017   Router1   Router(config)#access-list 26 deny ?
+Paz 10. Ara 19:09:34 2017   Router1   Router(config)#access-list 26 deny host ?
+Paz 10. Ara 19:09:45 2017   Router1   Router(config)#access-list 26 deny host 192.168.34.1
+Paz 10. Ara 19:10:01 2017   Router1   Router(config)#access-list 26 deny host 192.168.34.5
+Paz 10. Ara 19:10:06 2017   Router1   Router(config)#access-list 26 deny host 192.168.34.6
+Paz 10. Ara 19:10:09 2017   Router1   Router(config)#access-list 26 deny host 192.168.34.7
+Paz 10. Ara 19:10:12 2017   Router1   Router(config)#access-list 26 deny host 192.168.34.8
+Paz 10. Ara 19:10:43 2017   Router1   Router#sh running-config 
+Paz 10. Ara 19:10:58 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:12:30 2017   Router1   Router#conf ter
+Paz 10. Ara 19:12:35 2017   Router1   Router(config)#int fastEthernet 0/0
+Paz 10. Ara 19:12:48 2017   Router1   Router(config-if)#ip access-group ?
+Paz 10. Ara 19:13:04 2017   Router1   Router(config-if)#ip access-group 26 ?
+Paz 10. Ara 19:13:31 2017   Router1   Router(config-if)#ip access-group 26 in
+Paz 10. Ara 19:14:00 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:15:26 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:15:56 2017   Router1   Router#conf ter
+Paz 10. Ara 19:16:07 2017   Router1   Router(config)#access-list 26 permit ?
+Paz 10. Ara 19:16:14 2017   Router1   Router(config)#access-list 26 permit any
+Paz 10. Ara 19:16:18 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:16:30 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:17:11 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:17:15 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:17:17 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:18:06 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:19:11 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:19:47 2017   Router1   Router#sh running-config 
+Paz 10. Ara 19:20:00 2017   Router1   Router#conf ter
+Paz 10. Ara 19:20:05 2017   Router1   Router(config)#int fastEthernet 0/0
+Paz 10. Ara 19:20:09 2017   Router1   Router(config-if)#no ip access-group 26 in
+Paz 10. Ara 19:20:25 2017   Router1   Router(config-if)#ip access-group 26 out
+Paz 10. Ara 19:21:47 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:26:18 2017   Router1   Router#conf ter
+Paz 10. Ara 19:26:20 2017   Router1   Router(config)#int fastEthernet 0/0
+Paz 10. Ara 19:26:26 2017   Router1   Router(config-if)#no ip access-group 26 out
+Paz 10. Ara 19:26:32 2017   Router1   Router(config-if)#int fastEthernet 0/1
+Paz 10. Ara 19:26:38 2017   Router1   Router(config-if)#ip access-group 26 out
+Paz 10. Ara 19:26:46 2017   Router1   Router#sh running-config 
+Paz 10. Ara 19:26:57 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:27:09 2017   Router1   Router#clear ?
+Paz 10. Ara 19:27:15 2017   Router1   Router#clear access-list ?
+Paz 10. Ara 19:27:23 2017   Router1   Router#clear access-list counters 
+Paz 10. Ara 19:27:27 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:27:43 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:27:49 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:27:51 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:27:53 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:29:09 2017   Router1   Router#conf ter
+Paz 10. Ara 19:29:26 2017   Router1   Router(config)#access-list 26 deny host 192.168.34.10
+Paz 10. Ara 19:29:44 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:30:33 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:30:35 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:30:43 2017   Router1   Router#sh access-lists 
+Paz 10. Ara 19:31:32 2017   Router1   Router#conf ter
+Paz 10. Ara 19:31:41 2017   Router1   Router(config)#ip access-list ?
+Paz 10. Ara 19:31:48 2017   Router1   Router(config)#ip access-list standard ?
+Paz 10. Ara 19:32:00 2017   Router1   Router(config)#ip access-list standard 26
+Paz 10. Ara 19:32:09 2017   Router1   Router(config-std-nacl)#?
+Paz 10. Ara 19:32:33 2017   Router1   Router(config-std-nacl)#no 70
+Paz 10. Ara 19:32:40 2017   Router1   Router(config-std-nacl)#do sh acc
+Paz 10. Ara 19:32:57 2017   Router1   Router(config-std-nacl)#7 ?
+Paz 10. Ara 19:33:05 2017   Router1   Router(config-std-nacl)#7 deny ?
+Paz 10. Ara 19:33:23 2017   Router1   Router(config-std-nacl)#7 deny host 192.168.34.10
+Paz 10. Ara 19:33:25 2017   Router1   Router(config-std-nacl)#do sh acc
+Paz 10. Ara 19:35:11 2017   Router1   Router(config-std-nacl)#no 30
+Paz 10. Ara 19:35:13 2017   Router1   Router(config-std-nacl)#do sh acc
+Paz 10. Ara 19:35:29 2017   Router1   Router(config-std-nacl)#exit
+Paz 10. Ara 19:35:35 2017   Router1   Router(config)#ip access-list standard ?
+Paz 10. Ara 19:35:46 2017   Router1   Router(config)#ip access-list standard telnet_ssh_engelle
+Paz 10. Ara 19:36:14 2017   Router1   Router(config-std-nacl)#deny host 192.168.34.10
+Paz 10. Ara 19:36:19 2017   Router1   Router(config-std-nacl)#permit any

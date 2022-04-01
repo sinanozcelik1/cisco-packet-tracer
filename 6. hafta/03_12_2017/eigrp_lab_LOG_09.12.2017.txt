@@ -1,0 +1,212 @@
+Cmt 9. Ara 16:06:20 2017   Sube1   Sube1>en
+Cmt 9. Ara 16:06:26 2017   Sube1   Sube1#sh running-config 
+Cmt 9. Ara 16:06:40 2017   Merkez   Merkez>en
+Cmt 9. Ara 16:06:47 2017   Merkez   Merkez#sh running-config 
+Cmt 9. Ara 16:07:14 2017   Merkez   Merkez#conf ter
+Cmt 9. Ara 16:07:18 2017   Merkez   Merkez(config)#router eigrp 50
+Cmt 9. Ara 16:07:35 2017   Merkez   Merkez(config-router)#network 192.168.10.8 0.0.0.3
+Cmt 9. Ara 16:07:59 2017   Sube1   Sube1#conf ter
+Cmt 9. Ara 16:08:03 2017   Sube1   Sube1(config)#router eigrp 50
+Cmt 9. Ara 16:08:10 2017   Sube1   Sube1(config-router)#no auto-summary 
+Cmt 9. Ara 16:08:24 2017   Sube1   Sube1(config-router)#network 192.168.10.8 0.0.0.3
+Cmt 9. Ara 16:08:44 2017   Merkez   Merkez(config-router)#do sh ip route
+Cmt 9. Ara 16:10:23 2017   Sube1   Sube1(config-router)#do sh ip rou
+Cmt 9. Ara 16:12:14 2017   Sube2   Sube2>en
+Cmt 9. Ara 16:12:22 2017   Sube2   Sube2#sh ip route
+Cmt 9. Ara 16:14:25 2017   Sube1   Sube1(config-router)#do ping 172.16.16.1
+Cmt 9. Ara 16:18:21 2017   Sube1   Sube1(config-router)#network 192.168.32.0 0.0.3.255
+Cmt 9. Ara 16:18:31 2017   Merkez   Merkez(config-router)#do sh ip route
+Cmt 9. Ara 16:20:06 2017   Sube2   Sube2#sh ip route
+Cmt 9. Ara 16:20:18 2017   Router3   Router>en
+Cmt 9. Ara 16:20:21 2017   Router3   Router#sh ip route 
+Cmt 9. Ara 16:21:07 2017   Sube1   Sube1#conf ter
+Cmt 9. Ara 16:21:11 2017   Sube1   Sube1(config)#int fastEthernet 0/1
+Cmt 9. Ara 16:21:23 2017   Sube1   Sube1(config-if)#ip summary-address eigrp 50 ?
+Cmt 9. Ara 16:21:31 2017   Sube1   Sube1(config-if)#ip summary-address eigrp 50 192.168.32.0 ?
+Cmt 9. Ara 16:21:45 2017   Sube1   Sube1(config-if)#ip summary-address eigrp 50 192.168.32.0 255.255.252.0
+Cmt 9. Ara 16:22:00 2017   Merkez   Merkez(config-router)#do sh ip route
+Cmt 9. Ara 16:22:11 2017   Sube2   Sube2#sh ip route
+Cmt 9. Ara 16:22:19 2017   Router3   Router#sh ip route 
+Cmt 9. Ara 16:24:52 2017   Merkez   Merkez#sh running-config 
+Cmt 9. Ara 16:25:18 2017   ISP_Router   Router>en
+Cmt 9. Ara 16:25:21 2017   ISP_Router   Router#sh running-config 
+Cmt 9. Ara 16:25:34 2017   ISP_Router   Router#conf ter
+Cmt 9. Ara 16:25:38 2017   ISP_Router   Router(config)#int fastEthernet 0/1
+Cmt 9. Ara 16:25:42 2017   ISP_Router   Router(config-if)#no shutdown 
+Cmt 9. Ara 16:25:57 2017   ISP_Router   Router(config-if)#ip add 195.175.39.254 255.255.255.0
+Cmt 9. Ara 16:26:33 2017   Merkez   Merkez#sh ip route 
+Cmt 9. Ara 16:26:57 2017   ISP_Router   Router#sh ip route 
+Cmt 9. Ara 16:27:27 2017   ISP_Router   Router#conf ter
+Cmt 9. Ara 16:29:07 2017   ISP_Router   Router(config)#ip route 172.16.16.0 255.255.255.0 85.100.100.2
+Cmt 9. Ara 16:30:18 2017   Router3   Router#sh ip route 
+Cmt 9. Ara 16:31:20 2017   Merkez   Merkez#conf ter
+Cmt 9. Ara 16:31:26 2017   Merkez   Merkez(config)#router eigrp 50
+Cmt 9. Ara 16:31:38 2017   Merkez   Merkez(config-router)#redistribute static 
+Cmt 9. Ara 16:31:51 2017   Sube2   Sube2#sh ip route
+Cmt 9. Ara 16:32:06 2017   Router3   Router#sh ip route 
+Cmt 9. Ara 16:32:43 2017   Sube1   Sube1>en
+Cmt 9. Ara 16:32:46 2017   Sube1   Sube1#sh ip route 
+Cmt 9. Ara 16:37:55 2017   Merkez   Merkez#sh running-config 
+Cmt 9. Ara 16:42:38 2017   Sube1   Sube1#conf ter
+Cmt 9. Ara 16:42:42 2017   Sube1   Sube1(config)#int fastEthernet 0/01
+Cmt 9. Ara 16:42:45 2017   Sube1   Sube1(config-if)#no shutdown 
+Cmt 9. Ara 16:43:01 2017   Sube1   Sube1(config-if)#exit
+Cmt 9. Ara 16:43:06 2017   Sube1   Sube1(config)#int fastEthernet 0/0
+Cmt 9. Ara 16:43:10 2017   Sube1   Sube1(config-if)#no shutdown 
+Cmt 9. Ara 16:43:30 2017   Sube1   Sube1(config-if)#ip address 192.168.10.13 255.255.255.252
+Cmt 9. Ara 16:43:40 2017   Sube1   Sube1(config-if)#exit
+Cmt 9. Ara 16:43:50 2017   Sube1   Sube1(config)#router eigrp 50
+Cmt 9. Ara 16:44:15 2017   Sube1   Sube1(config-router)#network 192.168.10.12 ?
+Cmt 9. Ara 16:44:22 2017   Sube1   Sube1(config-router)#network 192.168.10.12 0.0.0.3
+Cmt 9. Ara 16:44:30 2017   Sube2   Sube2>en
+Cmt 9. Ara 16:44:32 2017   Sube2   Sube2#conf ter
+Cmt 9. Ara 16:44:38 2017   Sube2   Sube2(config)#int fa 1/1
+Cmt 9. Ara 16:44:40 2017   Sube2   Sube2(config-if)#no shutdown 
+Cmt 9. Ara 16:45:12 2017   Sube2   Sube2(config-if)#ip add 192.168.10.15 255.255.255.252
+Cmt 9. Ara 16:45:31 2017   Sube2   Sube2(config-if)#ip add 192.168.10.14 255.255.255.252
+Cmt 9. Ara 16:45:40 2017   Sube2   Sube2(config-if)#do ping 192.168.10.13
+Cmt 9. Ara 16:45:58 2017   Sube2   Sube2(config-if)#exit
+Cmt 9. Ara 16:46:09 2017   Sube2   Sube2(config)#conf ter
+Cmt 9. Ara 16:46:15 2017   Sube2   Sube2(config)#router eigrp 50
+Cmt 9. Ara 16:46:29 2017   Sube2   Sube2(config-router)#network 192.168.10.12 0.0.0.3
+Cmt 9. Ara 16:46:48 2017   Sube2   Sube2#sh ip route 
+Cmt 9. Ara 16:47:36 2017   Sube2   Sube2#sh running-config 
+Cmt 9. Ara 16:47:41 2017   Sube2   Sube2#sh ip route 
+Cmt 9. Ara 16:52:15 2017   Sube2   Sube2#sh ip protocols 
+Cmt 9. Ara 16:53:24 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 16:54:15 2017   Sube1   Sube1#sh running-config 
+Cmt 9. Ara 16:55:41 2017   Sube1   Sube1#conf ter
+Cmt 9. Ara 16:55:45 2017   Sube1   Sube1(config)#int fastEthernet 0/0
+Cmt 9. Ara 16:56:20 2017   Sube1   Sube1(config-if)#ip summary-address eigrp 50 192.168.32.0 255.255.252.0
+Cmt 9. Ara 16:56:30 2017   Sube2   Sube2#sh ip route 
+Cmt 9. Ara 16:56:50 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 16:58:06 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 16:58:43 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 16:59:45 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 17:01:18 2017   Sube1   Sube1#sh interfaces fastEthernet 0/0
+Cmt 9. Ara 17:02:32 2017   Sube1   Sube1#conf ter
+Cmt 9. Ara 17:02:37 2017   Sube1   Sube1(config)#int fastEthernet 0/0
+Cmt 9. Ara 17:02:41 2017   Sube1   Sube1(config-if)#bandwidth ?
+Cmt 9. Ara 17:02:55 2017   Sube1   Sube1(config-if)#bandwidth 95000
+Cmt 9. Ara 17:03:14 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 17:03:25 2017   Sube1   Sube1(config-if)#bandwidth 80000
+Cmt 9. Ara 17:03:42 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 17:04:01 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 17:04:02 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 17:04:06 2017   Sube2   Sube2#conf ter
+Cmt 9. Ara 17:04:13 2017   Sube2   Sube2(config)#int fastEthernet 1/1
+Cmt 9. Ara 17:04:18 2017   Sube2   Sube2(config-if)#bandwidth 80000
+Cmt 9. Ara 17:04:26 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 17:06:02 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 17:06:53 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 17:08:11 2017   Sube1   Sube1#sh ip eigrp topology 
+Cmt 9. Ara 17:33:51 2017   Sube2   Sube2>en
+Cmt 9. Ara 17:33:59 2017   Sube2   Sube2#conf ter
+Cmt 9. Ara 17:34:06 2017   Sube2   Sube2#sh ip eigrp topology 
+Cmt 9. Ara 17:34:48 2017   Sube2   Sube2#sh ip protocols 
+Cmt 9. Ara 17:36:25 2017   Sube2   Sube2#conf ter
+Cmt 9. Ara 17:36:29 2017   Sube2   Sube2(config)#router eigrp 50
+Cmt 9. Ara 17:36:32 2017   Sube2   Sube2(config-router)#variance ?
+Cmt 9. Ara 17:37:20 2017   Sube2   Sube2(config-router)#variance 3
+Cmt 9. Ara 17:38:19 2017   Sube2   Sube2#sh ip eigrp topology
+Cmt 9. Ara 17:40:54 2017   Sube2   Sube2#sh running-config 
+Cmt 9. Ara 17:41:04 2017   Sube2   Sube2#sh ip protocols 
+Cmt 9. Ara 17:43:48 2017   Sube2   Sube2#sh ip route 
+Cmt 9. Ara 17:44:07 2017   Sube2   Sube2#sh ip eigrp topology
+Cmt 9. Ara 17:49:00 2017   Sube1   Sube1>en
+Cmt 9. Ara 17:49:04 2017   Sube1   Sube1#sh ip eigrp topology 
+Cmt 9. Ara 17:49:48 2017   Sube1   Sube1#conf ter
+Cmt 9. Ara 17:49:52 2017   Sube1   Sube1(config)#router eigrp 50
+Cmt 9. Ara 17:49:55 2017   Sube1   Sube1(config-router)#variance 50
+Cmt 9. Ara 17:50:05 2017   Sube1   Sube1#sh ip eigrp topology 
+Cmt 9. Ara 17:51:42 2017   Sube3   Router>en
+Cmt 9. Ara 17:51:43 2017   Sube3   Router#conf ter
+Cmt 9. Ara 17:51:45 2017   Sube3   Router(config)#?
+Cmt 9. Ara 17:51:54 2017   Sube3   Router(config)#key ?
+Cmt 9. Ara 17:51:57 2017   Sube3   Router(config)#key chain ?
+Cmt 9. Ara 17:52:09 2017   Sube3   Router(config)#key chain Sube3
+Cmt 9. Ara 17:52:11 2017   Sube3   Router(config-keychain)#?
+Cmt 9. Ara 17:52:20 2017   Sube3   Router(config-keychain)#key ?
+Cmt 9. Ara 17:52:36 2017   Sube3   Router(config-keychain)#key 1
+Cmt 9. Ara 17:52:40 2017   Sube3   Router(config-keychain-key)#?
+Cmt 9. Ara 17:52:52 2017   Sube3   Router(config-keychain-key)#key-string cisco1
+Cmt 9. Ara 17:53:13 2017   Sube3   Router(config-keychain-key)#exit
+Cmt 9. Ara 17:53:16 2017   Sube3   Router(config-keychain)#key 2
+Cmt 9. Ara 17:53:21 2017   Sube3   Router(config-keychain-key)#key-string cisco2
+Cmt 9. Ara 17:53:24 2017   Sube3   Router(config-keychain-key)#exit
+Cmt 9. Ara 17:53:27 2017   Sube3   Router#sh running-config 
+Cmt 9. Ara 17:53:50 2017   Sube3   Router#conf ter
+Cmt 9. Ara 17:53:55 2017   Sube3   Router(config)#service password-encryption 
+Cmt 9. Ara 17:53:57 2017   Sube3   Router#sh running-config 
+Cmt 9. Ara 17:55:40 2017   Sube3   Router#conf ter
+Cmt 9. Ara 17:57:07 2017   Sube3   Router(config)#int fastEthernet 0/1
+Cmt 9. Ara 17:57:09 2017   Sube3   Router(config-if)#?
+Cmt 9. Ara 17:57:17 2017   Sube3   Router(config-if)#ip ?
+Cmt 9. Ara 17:57:22 2017   Sube3   Router(config-if)#ip authentication ?
+Cmt 9. Ara 17:57:31 2017   Sube3   Router(config-if)#ip authentication key-chain ?
+Cmt 9. Ara 17:57:36 2017   Sube3   Router(config-if)#ip authentication key-chain eigrp ?
+Cmt 9. Ara 17:57:38 2017   Sube3   Router(config-if)#ip authentication key-chain eigrp 50 ?
+Cmt 9. Ara 17:58:37 2017   Sube3   Router(config-if)#ip authentication key-chain eigrp 50 Sube3
+Cmt 9. Ara 17:58:52 2017   Sube3   Router(config-if)#ip authentication ?
+Cmt 9. Ara 17:58:56 2017   Sube3   Router(config-if)#ip authentication mode ?
+Cmt 9. Ara 17:59:00 2017   Sube3   Router(config-if)#ip authentication mode eigrp 50 ?
+Cmt 9. Ara 17:59:18 2017   Sube3   Router(config-if)#ip authentication mode eigrp 50 md5
+Cmt 9. Ara 18:00:56 2017   Sube3   Router#sh running-config 
+Cmt 9. Ara 18:01:16 2017   Sube3   Router#sh ip eigrp neighbors 
+Cmt 9. Ara 18:01:23 2017   Sube2   Sube2>enable 
+Cmt 9. Ara 18:01:35 2017   Sube2   Sube2#sh ip eigrp neighbors 
+Cmt 9. Ara 18:02:22 2017   Sube2   Sube2#conf ter
+Cmt 9. Ara 18:02:29 2017   Sube2   Sube2(config)#int fastEthernet 1/0
+Cmt 9. Ara 18:02:38 2017   Sube2   Sube2(config-if)#ip authentication mode ?
+Cmt 9. Ara 18:02:42 2017   Sube2   Sube2(config-if)#ip authentication mode eigrp 50 md5
+Cmt 9. Ara 18:02:47 2017   Sube2   Sube2(config-if)#ip authentication ?
+Cmt 9. Ara 18:02:58 2017   Sube2   Sube2(config-if)#exit
+Cmt 9. Ara 18:03:02 2017   Sube2   Sube2(config)#key chain ?
+Cmt 9. Ara 18:03:08 2017   Sube2   Sube2(config)#key chain Sube2
+Cmt 9. Ara 18:03:11 2017   Sube2   Sube2(config-keychain)#key 1
+Cmt 9. Ara 18:03:16 2017   Sube2   Sube2(config-keychain-key)#key-string cisco1
+Cmt 9. Ara 18:03:18 2017   Sube2   Sube2(config-keychain-key)#exit
+Cmt 9. Ara 18:03:20 2017   Sube2   Sube2(config-keychain)#key 2
+Cmt 9. Ara 18:03:24 2017   Sube2   Sube2(config-keychain-key)#key-string cisco2
+Cmt 9. Ara 18:03:26 2017   Sube2   Sube2(config-keychain-key)#exit
+Cmt 9. Ara 18:03:28 2017   Sube2   Sube2(config-keychain)#exit
+Cmt 9. Ara 18:03:34 2017   Sube2   Sube2(config)#int fastEthernet 1/0
+Cmt 9. Ara 18:03:39 2017   Sube2   Sube2(config-if)#ip authentication key-chain ?
+Cmt 9. Ara 18:03:44 2017   Sube2   Sube2(config-if)#ip authentication key-chain eigrp 50 ?
+Cmt 9. Ara 18:03:53 2017   Sube2   Sube2(config-if)#ip authentication key-chain eigrp 50 Sube2
+Cmt 9. Ara 18:04:14 2017   Sube2   Sube2(config-if)#exit
+Cmt 9. Ara 18:04:29 2017   Sube2   Sube2(config)#service password-encryption 
+Cmt 9. Ara 18:04:51 2017   Sube2   Sube2#sh ip eigrp neighbors  
+Cmt 9. Ara 18:05:14 2017   Sube3   Router#conf ter
+Cmt 9. Ara 18:05:23 2017   Sube3   Router(config)#key chain Sube3
+Cmt 9. Ara 18:05:25 2017   Sube3   Router(config-keychain)#key 1
+Cmt 9. Ara 18:05:32 2017   Sube3   Router(config-keychain-key)#key-string cisco5
+Cmt 9. Ara 18:06:28 2017   Sube3   Router(config-keychain-key)#key-string cisco1
+Cmt 9. Ara 18:06:52 2017   Sube2   Sube2#sh ip eigrp neighbors  
+Cmt 9. Ara 18:07:11 2017   Sube3   Router#clear ?
+Cmt 9. Ara 18:07:15 2017   Sube3   Router#clear ip e?
+Cmt 9. Ara 18:07:16 2017   Sube3   Router#clear ip ?
+Cmt 9. Ara 18:07:24 2017   Sube3   Router#conf ter
+Cmt 9. Ara 18:07:28 2017   Sube3   Router(config)#router eigrp 50
+Cmt 9. Ara 18:07:30 2017   Sube3   Router(config-router)#auto-summary 
+Cmt 9. Ara 18:07:38 2017   Sube3   Router(config-router)#no auto-summary 
+Cmt 9. Ara 18:07:59 2017   Sube3   Router#sh ip eigrp neighbors 
+Cmt 9. Ara 18:08:27 2017   Sube3   Router#sh running-config 
+Cmt 9. Ara 18:08:40 2017   Sube3   Router#conf ter
+Cmt 9. Ara 18:08:43 2017   Sube3   Router(config)#service password-encryption 
+Cmt 9. Ara 18:08:47 2017   Sube3   Router#sh running-config 
+Cmt 9. Ara 18:08:53 2017   Sube3   Router#conf ter
+Cmt 9. Ara 18:09:10 2017   Sube3   Router(config)#no service password-encryption 
+Cmt 9. Ara 18:09:13 2017   Sube3   Router(config)#service password-encryption 
+Cmt 9. Ara 18:09:16 2017   Sube3   Router#sh running-config 
+Cmt 9. Ara 18:09:28 2017   Sube2   Sube2#sh running-config 
+Cmt 9. Ara 18:09:38 2017   Sube3   Router#conf ter
+Cmt 9. Ara 18:09:52 2017   Sube3   Router(config)#key chain Sube3
+Cmt 9. Ara 18:09:54 2017   Sube3   Router(config-keychain)#key 1
+Cmt 9. Ara 18:09:58 2017   Sube3   Router(config-keychain-key)#key-string 0822455D0A1654
+Cmt 9. Ara 18:10:10 2017   Sube3   Router#sh running-config 
+Cmt 9. Ara 18:10:25 2017   Sube3   Router#wr
+Cmt 9. Ara 18:10:27 2017   Sube3   Router#reload
+Cmt 9. Ara 18:10:42 2017   Sube3   Router>en
+Cmt 9. Ara 18:10:50 2017   Sube3   Router#sh running-config 
+Cmt 9. Ara 18:11:36 2017   Sube3   Router#sh ip eigrp neighbors 

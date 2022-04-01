@@ -1,0 +1,61 @@
+Cmt 6. Oca 17:11:44 2018   Switch0   Switch>enable
+Cmt 6. Oca 17:11:44 2018   Switch0   Switch#configure terminal
+Cmt 6. Oca 17:11:58 2018   Switch0   Switch#sh interfaces vlan 1
+Cmt 6. Oca 17:31:08 2018   Switch4   Switch>en
+Cmt 6. Oca 17:31:11 2018   Switch4   Switch#sh spanning-tree 
+Cmt 6. Oca 17:31:48 2018   Switch1   Switch>enable 
+Cmt 6. Oca 17:31:50 2018   Switch1   Switch#sh spanning-tree 
+Cmt 6. Oca 17:35:11 2018   Switch6   Switch>en
+Cmt 6. Oca 17:35:13 2018   Switch6   Switch#sh spanning-tree 
+Cmt 6. Oca 17:40:07 2018   Switch8   Switch>en
+Cmt 6. Oca 17:40:09 2018   Switch8   Switch#sh spanning-tree 
+Cmt 6. Oca 18:14:28 2018   Switch0   Switch>en
+Cmt 6. Oca 18:14:30 2018   Switch0   Switch#conf ter
+Cmt 6. Oca 18:14:34 2018   Switch0   Switch(config)#int fastEthernet 0/15
+Cmt 6. Oca 18:14:45 2018   Switch0   Switch(config-if)#spanning-tree ?
+Cmt 6. Oca 18:14:49 2018   Switch0   Switch(config-if)#spanning-tree portfast ?
+Cmt 6. Oca 18:14:50 2018   Switch0   Switch(config-if)#spanning-tree portfast
+Cmt 6. Oca 18:18:02 2018   Switch0   Switch(config-if)#exit
+Cmt 6. Oca 18:18:06 2018   Switch0   Switch(config)#spanning-tree ?
+Cmt 6. Oca 18:18:11 2018   Switch0   Switch(config)#spanning-tree mode ?
+Cmt 6. Oca 18:18:22 2018   Switch0   Switch#sh running-config 
+Cmt 6. Oca 18:18:30 2018   Switch0   Switch#conf ter
+Cmt 6. Oca 18:18:37 2018   Switch0   Switch(config)#spanning-tree mode pvst 
+Cmt 6. Oca 18:19:33 2018   Switch0   Switch(config)#spanning-tree mode rapid-pvst 
+Cmt 6. Oca 18:22:46 2018   Switch2   Switch>en
+Cmt 6. Oca 18:22:58 2018   Switch2   Switch#conf ter
+Cmt 6. Oca 18:23:07 2018   Switch2   Switch(config)#int range fastEthernet 0/23-24
+Cmt 6. Oca 18:23:11 2018   Switch2   Switch(config-if-range)#switchport mode trunk 
+Cmt 6. Oca 18:23:24 2018   Switch3   Switch>en
+Cmt 6. Oca 18:23:26 2018   Switch3   Switch#conf ter
+Cmt 6. Oca 18:23:33 2018   Switch3   Switch(config)#int range fastEthernet 0/23-24
+Cmt 6. Oca 18:23:37 2018   Switch3   Switch(config-if-range)#switchport mode trunk 
+Cmt 6. Oca 18:23:52 2018   Switch2   Switch(config-if-range)#exit
+Cmt 6. Oca 18:24:03 2018   Switch2   Switch(config)#vtp domain abcd.com
+Cmt 6. Oca 18:24:15 2018   Switch1   Switch>en
+Cmt 6. Oca 18:24:23 2018   Switch1   Switch#sh vtp status 
+Cmt 6. Oca 18:24:33 2018   Switch3   Switch#sh vtp status 
+Cmt 6. Oca 18:24:41 2018   Switch2   Switch(config)#vlan 10
+Cmt 6. Oca 18:24:44 2018   Switch2   Switch(config-vlan)#vlan 20
+Cmt 6. Oca 18:24:46 2018   Switch2   Switch(config-vlan)#vlan 30
+Cmt 6. Oca 18:24:48 2018   Switch2   Switch(config-vlan)#vlan 40
+Cmt 6. Oca 18:24:51 2018   Switch2   Switch(config-vlan)#vlan 50
+Cmt 6. Oca 18:25:12 2018   Switch2   Switch#sh spanning-tree 
+Cmt 6. Oca 18:26:24 2018   Switch1   Switch#sh spanning-tree 
+Cmt 6. Oca 18:27:52 2018   Switch1   Switch#conf ter
+Cmt 6. Oca 18:28:06 2018   Switch1   Switch(config)#spanning-tree vlan 20 priority ?
+Cmt 6. Oca 18:28:21 2018   Switch1   Switch(config)#spanning-tree vlan 20 priority 4096
+Cmt 6. Oca 18:28:26 2018   Switch1   Switch(config)#spanning-tree vlan 30 priority 4096
+Cmt 6. Oca 18:29:16 2018   Switch1   Switch#sh spanning-tree 
+Cmt 6. Oca 18:30:47 2018   Switch3   Switch#sh spanning-tree 
+Cmt 6. Oca 18:31:56 2018   Switch3   Switch#conf ter
+Cmt 6. Oca 18:32:05 2018   Switch3   Switch(config)#spanning-tree vlan 40 priority 4096
+Cmt 6. Oca 18:32:09 2018   Switch3   Switch(config)#spanning-tree vlan 50 priority 4096
+Cmt 6. Oca 18:32:23 2018   Switch3   Switch#sh spanning-tree 
+Cmt 6. Oca 18:35:18 2018   Switch2   Switch#conf ter
+Cmt 6. Oca 18:35:24 2018   Switch2   Switch(config)#int fastEthernet 0/10
+Cmt 6. Oca 18:35:32 2018   Switch2   Switch(config-if)#switchport access vlan 20
+Cmt 6. Oca 18:35:37 2018   Switch3   Switch#conf ter
+Cmt 6. Oca 18:35:42 2018   Switch3   Switch(config)#int fastEthernet 0/10
+Cmt 6. Oca 18:35:48 2018   Switch3   Switch(config-if)#switchport access vlan 20
+Cmt 6. Oca 18:38:17 2018   Switch3   Switch#sh spanning-tree 

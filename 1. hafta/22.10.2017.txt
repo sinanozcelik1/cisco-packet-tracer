@@ -1,0 +1,80 @@
+  
+ 		DNS Server 
+
+             Sitenin Adý     Adresi
+             sahibinden.com   85.111.30.111
+             google.com       64.145.65.188
+ 
+
+		
+		  9121 AS Number TTNET
+
+
+
+  IPv4  32 bit
+
+
+0   .0     .0    .0
+255.255.255.255
+
+
+  1.Oktet         Default Subnet Mask
+A Class 1-126         255.0.0.0
+B class 128-191       255.255.0.0
+C Class 192-223       255.255.255.0
+-------
+D Class 224-239 (Multicast Range)
+E Class 240-255 (Reserved for Documentation)
+
+
+
+
+PUBLIC
+..........
+
+
+
+PRIVATE
+A  10.0.0.0    - 10.255.255.255
+B  172.16.0.0  - 172.31.255.255
+C  192.168.0.0 - 192.168.255.255
+
+127.0.0.0 - 127.255.255.255  Local Loopback Adres
+
+169.254.0.0 - 169.254.255.255
+APIPA TCP/IP için Reserved edilmiþ range
+
+Automatic
+Private
+IP
+Addressing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

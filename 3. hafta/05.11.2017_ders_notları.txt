@@ -1,0 +1,321 @@
+
+
+ 172.25.0.0/16
+
+ 255.255.11100000.0
+
+
+1.N 172.25.0.0/19
+2.N 172.25.32.0/19
+3.N 172.25.64.0/19
+
+172.25.64.1 - 172.25.95.254
+
+
+
+4.N 172.25.96.0/19
+5.N 172.25.128.0/19
+6.N 172.25.160.0/19
+7.N 172.25.192.0/19
+8.N 172.25.224.0/19
+
+
+
+   10.16.3.66/23
+
+ 255.255.11111110.00000000
+
+
+ 10.16.0.0/23
+
+ 10.16.2.0/23  Network ID
+
+
+
+Valid Host Range
+10.16.2.1 - 10.16.3.254
+
+Broadcast ID:10.16.3.255
+
+
+
+ 10.16.4.0/23
+
+
+ 172.16.210.0/22
+
+ 
+ 255.255.11111100.00000000
+
+ 172.16.0.0
+ 172.16.4.0
+ 172.16.8.0
+ 172.16.12.0
+.
+.
+.
+ 172.16.208.0
+
+ 172.16.212.0
+255.255.255.224
+255.255.255.11100000
+
+              Host Sayýsý
+2 üzeri 5= 32-2=30
+
+IOS=Inter Operating System
+
+
+Router				Personal Computer
+Anakart				Anakart
+CPU				CPU
+RAM Bellek(running-config)	RAM Bellek
+MiniIOS(Rommon)			ROM Bellek(BIOS)
+Flash Mem(.bin)			HDD(Install Edilmiþ Bir Ýþeltim Sistemi)	
+NvRAM(Startup-config)   
+Geniþleme Yuvalarý		PCIex,AGP,
+
+
+
+Putty
+Secure CRT
+Solar Winds
+
+
+
+
+Router>  User Mode (Temel görüntüleme(show) ve test iþlemleri yapýlýr.)
+
+
+Router>enable 
+
+Router#   ------>Privilege EXEC Mode (Enable Mod)
+                 Cihazýn tüm ayar ve görüntüleme(show) komutlarýnýn 
+                 kullanýlabildiði mod.
+
+
+Router#configure terminal
+Router(config)#  -----> Config Mod  
+
+                  (RAM)        (NvRAM)
+KADIKOY#copy running-config startup-config  = write
+
+
+
+
+
+
+
+
+
+        568-B
+        568-A  1-3
+               2-6
+
+1 Send (Tx)
+2 Send (TX)
+3 Receive (Rx)
+4
+5
+6 Receive (Rx)
+7
+8
+
+
+
+R1(config)#service password-encryption
+
+komutu sistem üzerinde cleartext olarak görünen
+tüm  passwordleri þifreler. Level 7
+
+
+Cihaza User mode'dan Enable Mode'a geçerken þifre sormasý için
+R1>enable
+Password:
+
+R1#
+
+
+R1(config)#enable secret 1234567   yada
+
+R1(config)#enable password cisco  komutlarýndan biri kullanýlarak þifre verilebilir.
+
+
+
+Cihaza console portundan baðlanýrken þifre sormasý için aþaðýdaki
+ayarlar yapýlýr.
+
+
+R1(config)#line con 0
+R1(config-line)#password cisco
+R1(config-line)#login           Þifre sormayý aktif hale getirir.
+
+
+Cihaza console portundan baðlanýrken username ve þifre sormasý için aþaðýdaki
+ayarlar yapýlýr.
+R1(config)#line con 0
+R1(config-line)#login local
+
+
+Local username ve passwordler aþaðýdaki komularla oluþturulur.
+R1(config)#username admin password admin
+R1(config)#username ankara password 12345
+
+
+Telnet ile uzaktan baðlanmak için;
+R1(config)#line vty 0 4
+R1(config-line)#login local   
+
+Local username ve passwordler kullanýlarak cihaza uzaktan baðlanýlabilir.
+
+
+
+
+
+
+
+
+Telnet TCP 23 ClearText
+SSH    TCP 22 Þifreli 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

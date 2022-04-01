@@ -1,0 +1,50 @@
+VLAN Nedir?
+VLAN=Virtual Local Area Network
+
+Vlan 1=Default=Magement Vlan=Native Vlan=Untagged Vlan
+
+
+10.10.10.0/24
+
+
+LAN
+WLAN
+
+MAN
+WMAN
+
+WAN Wide Area Network
+WWAN
+
+PAN Personel Area Network
+
+
+
+VLAN Trunking  +
+Vlan Tagging   +
+Default Vlan   + 
+Tagged         +
+Untagged       +
+IEEE 802.1Q    +
+Inter Vlan Routing +
+Subinterface       +
+Metroethernet   +
+L3-Switch       +
+Interface Vlan  + 
+Static Routing  +
+Default Static Route +
+
+
+
+IEEE 802.3  Kablolu Ethernet
+IEEE 802.11 Wireless Ethernet
+IETF
+ITU-T
+TSE
+ISO 27001
+ISO 9001
+
+
+
+
+HACCP
